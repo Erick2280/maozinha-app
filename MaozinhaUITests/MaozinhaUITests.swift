@@ -1,13 +1,13 @@
 //
-//  Ma_ozinhaUITests.swift
-//  MãozinhaUITests
+//  MaozinhaUITests.swift
+//  MaozinhaUITests
 //
-//  Created by Erick Almeida on 16/11/20.
+//  Created by Erick Almeida on 17/11/20.
 //
 
 import XCTest
 
-class Ma_ozinhaUITests: XCTestCase {
+class MaozinhaUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

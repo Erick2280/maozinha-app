@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B6947D4DEF67CEFA4A81756 /* Pods_Maozinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6574B3975E056373B3CBAEDB /* Pods_Maozinha.framework */; };
+		85843847467D6C006981B7D6 /* Pods_Maozinha_MaozinhaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F166CCC9E20C74E5B77A8B /* Pods_Maozinha_MaozinhaUITests.framework */; };
+		A783571F25641C0A0063DF2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783571E25641C0A0063DF2A /* AppDelegate.swift */; };
+		A783572125641C0A0063DF2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783572025641C0A0063DF2A /* SceneDelegate.swift */; };
+		A783572325641C0A0063DF2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783572225641C0A0063DF2A /* ViewController.swift */; };
+		A783572625641C0A0063DF2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A783572425641C0A0063DF2A /* Main.storyboard */; };
+		A783572925641C0A0063DF2A /* Maozinha.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A783572725641C0A0063DF2A /* Maozinha.xcdatamodeld */; };
+		A783572B25641C0D0063DF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A783572A25641C0D0063DF2A /* Assets.xcassets */; };
+		A783572E25641C0D0063DF2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A783572C25641C0D0063DF2A /* LaunchScreen.storyboard */; };
+		A783573925641C0D0063DF2A /* MaozinhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783573825641C0D0063DF2A /* MaozinhaTests.swift */; };
+		A783574425641C0D0063DF2A /* MaozinhaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783574325641C0D0063DF2A /* MaozinhaUITests.swift */; };
+		D229F1915A5796611D6BF42B /* Pods_MaozinhaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59975642A2BD3E5ECF20BBD8 /* Pods_MaozinhaTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A783573525641C0D0063DF2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A783571325641C0A0063DF2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A783571A25641C0A0063DF2A;
+			remoteInfo = Maozinha;
+		};
+		A783574025641C0D0063DF2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A783571325641C0A0063DF2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A783571A25641C0A0063DF2A;
+			remoteInfo = Maozinha;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A25D3E99D2B37DCD0EADC27 /* Pods-Maozinha-MaozinhaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maozinha-MaozinhaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Maozinha-MaozinhaUITests/Pods-Maozinha-MaozinhaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		42F166CCC9E20C74E5B77A8B /* Pods_Maozinha_MaozinhaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Maozinha_MaozinhaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56B4B5EE327873695905C9AB /* Pods-MaozinhaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaozinhaTests.debug.xcconfig"; path = "Target Support Files/Pods-MaozinhaTests/Pods-MaozinhaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		59975642A2BD3E5ECF20BBD8 /* Pods_MaozinhaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaozinhaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C84EA889AE58063D3734829 /* Pods-Maozinha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maozinha.debug.xcconfig"; path = "Target Support Files/Pods-Maozinha/Pods-Maozinha.debug.xcconfig"; sourceTree = "<group>"; };
+		6574B3975E056373B3CBAEDB /* Pods_Maozinha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Maozinha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73E9459595913B1EAE03B7C3 /* Pods-Maozinha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maozinha.release.xcconfig"; path = "Target Support Files/Pods-Maozinha/Pods-Maozinha.release.xcconfig"; sourceTree = "<group>"; };
+		87F3A4C37048492E9CBAAE19 /* Pods-Maozinha-MaozinhaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maozinha-MaozinhaUITests.release.xcconfig"; path = "Target Support Files/Pods-Maozinha-MaozinhaUITests/Pods-Maozinha-MaozinhaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9984CE9ED403F5224A6CEBC3 /* Pods-MaozinhaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaozinhaTests.release.xcconfig"; path = "Target Support Files/Pods-MaozinhaTests/Pods-MaozinhaTests.release.xcconfig"; sourceTree = "<group>"; };
+		A783571B25641C0A0063DF2A /* Maozinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maozinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A783571E25641C0A0063DF2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A783572025641C0A0063DF2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A783572225641C0A0063DF2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A783572525641C0A0063DF2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A783572825641C0A0063DF2A /* Maozinha.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Maozinha.xcdatamodel; sourceTree = "<group>"; };
+		A783572A25641C0D0063DF2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A783572D25641C0D0063DF2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A783572F25641C0D0063DF2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A783573425641C0D0063DF2A /* MaozinhaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaozinhaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A783573825641C0D0063DF2A /* MaozinhaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaozinhaTests.swift; sourceTree = "<group>"; };
+		A783573A25641C0D0063DF2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A783573F25641C0D0063DF2A /* MaozinhaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaozinhaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A783574325641C0D0063DF2A /* MaozinhaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaozinhaUITests.swift; sourceTree = "<group>"; };
+		A783574525641C0D0063DF2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A783571825641C0A0063DF2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B6947D4DEF67CEFA4A81756 /* Pods_Maozinha.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A783573125641C0D0063DF2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D229F1915A5796611D6BF42B /* Pods_MaozinhaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A783573C25641C0D0063DF2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85843847467D6C006981B7D6 /* Pods_Maozinha_MaozinhaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1C1F04B29EAC5EF09AD7A72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C84EA889AE58063D3734829 /* Pods-Maozinha.debug.xcconfig */,
+				73E9459595913B1EAE03B7C3 /* Pods-Maozinha.release.xcconfig */,
+				3A25D3E99D2B37DCD0EADC27 /* Pods-Maozinha-MaozinhaUITests.debug.xcconfig */,
+				87F3A4C37048492E9CBAAE19 /* Pods-Maozinha-MaozinhaUITests.release.xcconfig */,
+				56B4B5EE327873695905C9AB /* Pods-MaozinhaTests.debug.xcconfig */,
+				9984CE9ED403F5224A6CEBC3 /* Pods-MaozinhaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A783571225641C0A0063DF2A = {
+			isa = PBXGroup;
+			children = (
+				A783571D25641C0A0063DF2A /* Maozinha */,
+				A783573725641C0D0063DF2A /* MaozinhaTests */,
+				A783574225641C0D0063DF2A /* MaozinhaUITests */,
+				A783571C25641C0A0063DF2A /* Products */,
+				A1C1F04B29EAC5EF09AD7A72 /* Pods */,
+				FC49A787823E260F3610693D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A783571C25641C0A0063DF2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A783571B25641C0A0063DF2A /* Maozinha.app */,
+				A783573425641C0D0063DF2A /* MaozinhaTests.xctest */,
+				A783573F25641C0D0063DF2A /* MaozinhaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A783571D25641C0A0063DF2A /* Maozinha */ = {
+			isa = PBXGroup;
+			children = (
+				A783571E25641C0A0063DF2A /* AppDelegate.swift */,
+				A783572025641C0A0063DF2A /* SceneDelegate.swift */,
+				A783572225641C0A0063DF2A /* ViewController.swift */,
+				A783572425641C0A0063DF2A /* Main.storyboard */,
+				A783572A25641C0D0063DF2A /* Assets.xcassets */,
+				A783572C25641C0D0063DF2A /* LaunchScreen.storyboard */,
+				A783572F25641C0D0063DF2A /* Info.plist */,
+				A783572725641C0A0063DF2A /* Maozinha.xcdatamodeld */,
+			);
+			path = Maozinha;
+			sourceTree = "<group>";
+		};
+		A783573725641C0D0063DF2A /* MaozinhaTests */ = {
+			isa = PBXGroup;
+			children = (
+				A783573825641C0D0063DF2A /* MaozinhaTests.swift */,
+				A783573A25641C0D0063DF2A /* Info.plist */,
+			);
+			path = MaozinhaTests;
+			sourceTree = "<group>";
+		};
+		A783574225641C0D0063DF2A /* MaozinhaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A783574325641C0D0063DF2A /* MaozinhaUITests.swift */,
+				A783574525641C0D0063DF2A /* Info.plist */,
+			);
+			path = MaozinhaUITests;
+			sourceTree = "<group>";
+		};
+		FC49A787823E260F3610693D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6574B3975E056373B3CBAEDB /* Pods_Maozinha.framework */,
+				42F166CCC9E20C74E5B77A8B /* Pods_Maozinha_MaozinhaUITests.framework */,
+				59975642A2BD3E5ECF20BBD8 /* Pods_MaozinhaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A783571A25641C0A0063DF2A /* Maozinha */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A783574825641C0D0063DF2A /* Build configuration list for PBXNativeTarget "Maozinha" */;
+			buildPhases = (
+				59D5F4614938E9310092B876 /* [CP] Check Pods Manifest.lock */,
+				A783571725641C0A0063DF2A /* Sources */,
+				A783571825641C0A0063DF2A /* Frameworks */,
+				A783571925641C0A0063DF2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Maozinha;
+			productName = Maozinha;
+			productReference = A783571B25641C0A0063DF2A /* Maozinha.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A783573325641C0D0063DF2A /* MaozinhaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A783574B25641C0D0063DF2A /* Build configuration list for PBXNativeTarget "MaozinhaTests" */;
+			buildPhases = (
+				EC8F4F2B56EB90B4D08037F0 /* [CP] Check Pods Manifest.lock */,
+				A783573025641C0D0063DF2A /* Sources */,
+				A783573125641C0D0063DF2A /* Frameworks */,
+				A783573225641C0D0063DF2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A783573625641C0D0063DF2A /* PBXTargetDependency */,
+			);
+			name = MaozinhaTests;
+			productName = MaozinhaTests;
+			productReference = A783573425641C0D0063DF2A /* MaozinhaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A783573E25641C0D0063DF2A /* MaozinhaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A783574E25641C0D0063DF2A /* Build configuration list for PBXNativeTarget "MaozinhaUITests" */;
+			buildPhases = (
+				C533E723CAA33D50FD14B919 /* [CP] Check Pods Manifest.lock */,
+				A783573B25641C0D0063DF2A /* Sources */,
+				A783573C25641C0D0063DF2A /* Frameworks */,
+				A783573D25641C0D0063DF2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A783574125641C0D0063DF2A /* PBXTargetDependency */,
+			);
+			name = MaozinhaUITests;
+			productName = MaozinhaUITests;
+			productReference = A783573F25641C0D0063DF2A /* MaozinhaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A783571325641C0A0063DF2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					A783571A25641C0A0063DF2A = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					A783573325641C0D0063DF2A = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = A783571A25641C0A0063DF2A;
+					};
+					A783573E25641C0D0063DF2A = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = A783571A25641C0A0063DF2A;
+					};
+				};
+			};
+			buildConfigurationList = A783571625641C0A0063DF2A /* Build configuration list for PBXProject "Maozinha" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A783571225641C0A0063DF2A;
+			productRefGroup = A783571C25641C0A0063DF2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A783571A25641C0A0063DF2A /* Maozinha */,
+				A783573325641C0D0063DF2A /* MaozinhaTests */,
+				A783573E25641C0D0063DF2A /* MaozinhaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A783571925641C0A0063DF2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A783572E25641C0D0063DF2A /* LaunchScreen.storyboard in Resources */,
+				A783572B25641C0D0063DF2A /* Assets.xcassets in Resources */,
+				A783572625641C0A0063DF2A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A783573225641C0D0063DF2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A783573D25641C0D0063DF2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59D5F4614938E9310092B876 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Maozinha-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C533E723CAA33D50FD14B919 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Maozinha-MaozinhaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC8F4F2B56EB90B4D08037F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MaozinhaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A783571725641C0A0063DF2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A783572925641C0A0063DF2A /* Maozinha.xcdatamodeld in Sources */,
+				A783572325641C0A0063DF2A /* ViewController.swift in Sources */,
+				A783571F25641C0A0063DF2A /* AppDelegate.swift in Sources */,
+				A783572125641C0A0063DF2A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A783573025641C0D0063DF2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A783573925641C0D0063DF2A /* MaozinhaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A783573B25641C0D0063DF2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A783574425641C0D0063DF2A /* MaozinhaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A783573625641C0D0063DF2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A783571A25641C0A0063DF2A /* Maozinha */;
+			targetProxy = A783573525641C0D0063DF2A /* PBXContainerItemProxy */;
+		};
+		A783574125641C0D0063DF2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A783571A25641C0A0063DF2A /* Maozinha */;
+			targetProxy = A783574025641C0D0063DF2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A783572425641C0A0063DF2A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A783572525641C0A0063DF2A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A783572C25641C0D0063DF2A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A783572D25641C0D0063DF2A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A783574625641C0D0063DF2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A783574725641C0D0063DF2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A783574925641C0D0063DF2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C84EA889AE58063D3734829 /* Pods-Maozinha.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Maozinha/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.academy.Maozinha;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A783574A25641C0D0063DF2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73E9459595913B1EAE03B7C3 /* Pods-Maozinha.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Maozinha/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.academy.Maozinha;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A783574C25641C0D0063DF2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56B4B5EE327873695905C9AB /* Pods-MaozinhaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MaozinhaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.academy.MaozinhaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maozinha.app/Maozinha";
+			};
+			name = Debug;
+		};
+		A783574D25641C0D0063DF2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9984CE9ED403F5224A6CEBC3 /* Pods-MaozinhaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MaozinhaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.academy.MaozinhaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Maozinha.app/Maozinha";
+			};
+			name = Release;
+		};
+		A783574F25641C0D0063DF2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A25D3E99D2B37DCD0EADC27 /* Pods-Maozinha-MaozinhaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MaozinhaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.academy.MaozinhaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Maozinha;
+			};
+			name = Debug;
+		};
+		A783575025641C0D0063DF2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87F3A4C37048492E9CBAAE19 /* Pods-Maozinha-MaozinhaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MaozinhaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.academy.MaozinhaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Maozinha;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A783571625641C0A0063DF2A /* Build configuration list for PBXProject "Maozinha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A783574625641C0D0063DF2A /* Debug */,
+				A783574725641C0D0063DF2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A783574825641C0D0063DF2A /* Build configuration list for PBXNativeTarget "Maozinha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A783574925641C0D0063DF2A /* Debug */,
+				A783574A25641C0D0063DF2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A783574B25641C0D0063DF2A /* Build configuration list for PBXNativeTarget "MaozinhaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A783574C25641C0D0063DF2A /* Debug */,
+				A783574D25641C0D0063DF2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A783574E25641C0D0063DF2A /* Build configuration list for PBXNativeTarget "MaozinhaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A783574F25641C0D0063DF2A /* Debug */,
+				A783575025641C0D0063DF2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A783572725641C0A0063DF2A /* Maozinha.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A783572825641C0A0063DF2A /* Maozinha.xcdatamodel */,
+			);
+			currentVersion = A783572825641C0A0063DF2A /* Maozinha.xcdatamodel */;
+			path = Maozinha.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A783571325641C0A0063DF2A /* Project object */;
+}
