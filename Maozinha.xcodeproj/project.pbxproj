@@ -25,6 +25,7 @@
 		A7A115D9256BEE4600FDE59F /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7A115CF256BEE3400FDE59F /* DMSans-Italic.ttf */; };
 		A7A115DA256BEE4600FDE59F /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7A115D0256BEE3400FDE59F /* DMSans-MediumItalic.ttf */; };
 		D229F1915A5796611D6BF42B /* Pods_MaozinhaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59975642A2BD3E5ECF20BBD8 /* Pods_MaozinhaTests.framework */; };
+		E5D554EF256D355500BF9A83 /* onboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D554EE256D355500BF9A83 /* onboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		A7A115D2256BEE3400FDE59F /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 		A7A115D3256BEE3400FDE59F /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		A7A115D4256BEE3400FDE59F /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		E5D554EE256D355500BF9A83 /* onboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				A783572025641C0A0063DF2A /* SceneDelegate.swift */,
 				A783572225641C0A0063DF2A /* ViewController.swift */,
 				A783572425641C0A0063DF2A /* Main.storyboard */,
+				E5D554EE256D355500BF9A83 /* onboardingView.swift */,
 				A783572A25641C0D0063DF2A /* Assets.xcassets */,
 				A783572C25641C0D0063DF2A /* LaunchScreen.storyboard */,
 				A783572F25641C0D0063DF2A /* Info.plist */,
@@ -408,6 +411,7 @@
 				A783572925641C0A0063DF2A /* Maozinha.xcdatamodeld in Sources */,
 				A783572325641C0A0063DF2A /* ViewController.swift in Sources */,
 				A783571F25641C0A0063DF2A /* AppDelegate.swift in Sources */,
+				E5D554EF256D355500BF9A83 /* onboardingView.swift in Sources */,
 				A783572125641C0A0063DF2A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
