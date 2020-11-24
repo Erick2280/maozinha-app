@@ -27,6 +27,7 @@
 		A7A115D9256BEE4600FDE59F /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7A115CF256BEE3400FDE59F /* DMSans-Italic.ttf */; };
 		A7A115DA256BEE4600FDE59F /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7A115D0256BEE3400FDE59F /* DMSans-MediumItalic.ttf */; };
 		D229F1915A5796611D6BF42B /* Pods_MaozinhaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59975642A2BD3E5ECF20BBD8 /* Pods_MaozinhaTests.framework */; };
+		E51F470A256BF91E005A19AB /* introScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51F4709256BF91E005A19AB /* introScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		A7A115D2256BEE3400FDE59F /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 		A7A115D3256BEE3400FDE59F /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		A7A115D4256BEE3400FDE59F /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		E51F4709256BF91E005A19AB /* introScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				A783572225641C0A0063DF2A /* ViewController.swift */,
 				A717C5B7256BF3E000744A90 /* Views */,
 				A783572425641C0A0063DF2A /* Main.storyboard */,
+				E51F4709256BF91E005A19AB /* introScreenView.swift */,
 				A783572A25641C0D0063DF2A /* Assets.xcassets */,
 				A783572C25641C0D0063DF2A /* LaunchScreen.storyboard */,
 				A783572F25641C0D0063DF2A /* Info.plist */,
@@ -238,6 +241,7 @@
 				A783571725641C0A0063DF2A /* Sources */,
 				A783571825641C0A0063DF2A /* Frameworks */,
 				A783571925641C0A0063DF2A /* Resources */,
+				E530B9A9256D314A00093910 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -406,6 +410,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E530B9A9256D314A00093910 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#\"${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 		EC8F4F2B56EB90B4D08037F0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,6 +460,7 @@
 				A717C5B2256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift in Sources */,
 				A783572325641C0A0063DF2A /* ViewController.swift in Sources */,
 				A783571F25641C0A0063DF2A /* AppDelegate.swift in Sources */,
+				E51F470A256BF91E005A19AB /* introScreenView.swift in Sources */,
 				A783572125641C0A0063DF2A /* SceneDelegate.swift in Sources */,
 				A717C5C1256BF54F00744A90 /* ProgressBarView.swift in Sources */,
 			);
@@ -618,6 +640,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X43VG9VLQG;
 				INFOPLIST_FILE = Maozinha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -637,6 +660,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X43VG9VLQG;
 				INFOPLIST_FILE = Maozinha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
