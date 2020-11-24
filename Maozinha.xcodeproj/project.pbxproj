@@ -143,6 +143,7 @@
 		A717C5B7256BF3E000744A90 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E5D554EE256D355500BF9A83 /* onboardingView.swift */,
 				A717C5B6256BF3CA00744A90 /* UIElementViews */,
 				A717C5B0256BF33200744A90 /* TutorialViews */,
 			);
@@ -180,7 +181,6 @@
 				A783572225641C0A0063DF2A /* ViewController.swift */,
 				A717C5B7256BF3E000744A90 /* Views */,
 				A783572425641C0A0063DF2A /* Main.storyboard */,
-				E5D554EE256D355500BF9A83 /* onboardingView.swift */,
 				A783572A25641C0D0063DF2A /* Assets.xcassets */,
 				A783572C25641C0D0063DF2A /* LaunchScreen.storyboard */,
 				A783572F25641C0D0063DF2A /* Info.plist */,
