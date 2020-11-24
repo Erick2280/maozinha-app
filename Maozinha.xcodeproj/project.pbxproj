@@ -181,6 +181,7 @@
 				A783572225641C0A0063DF2A /* ViewController.swift */,
 				A717C5B7256BF3E000744A90 /* Views */,
 				A783572425641C0A0063DF2A /* Main.storyboard */,
+				E51F4709256BF91E005A19AB /* introScreenView.swift */,
 				A783572A25641C0D0063DF2A /* Assets.xcassets */,
 				A783572C25641C0D0063DF2A /* LaunchScreen.storyboard */,
 				A783572F25641C0D0063DF2A /* Info.plist */,
