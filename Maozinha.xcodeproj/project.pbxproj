@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1B6947D4DEF67CEFA4A81756 /* Pods_Maozinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6574B3975E056373B3CBAEDB /* Pods_Maozinha.framework */; };
 		85843847467D6C006981B7D6 /* Pods_Maozinha_MaozinhaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F166CCC9E20C74E5B77A8B /* Pods_Maozinha_MaozinhaUITests.framework */; };
+		A717C5B2256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717C5B1256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift */; };
+		A717C5C1256BF54F00744A90 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717C5C0256BF54F00744A90 /* ProgressBarView.swift */; };
 		A783571F25641C0A0063DF2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783571E25641C0A0063DF2A /* AppDelegate.swift */; };
 		A783572125641C0A0063DF2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783572025641C0A0063DF2A /* SceneDelegate.swift */; };
 		A783572325641C0A0063DF2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783572225641C0A0063DF2A /* ViewController.swift */; };
@@ -54,6 +56,8 @@
 		73E9459595913B1EAE03B7C3 /* Pods-Maozinha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maozinha.release.xcconfig"; path = "Target Support Files/Pods-Maozinha/Pods-Maozinha.release.xcconfig"; sourceTree = "<group>"; };
 		87F3A4C37048492E9CBAAE19 /* Pods-Maozinha-MaozinhaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maozinha-MaozinhaUITests.release.xcconfig"; path = "Target Support Files/Pods-Maozinha-MaozinhaUITests/Pods-Maozinha-MaozinhaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9984CE9ED403F5224A6CEBC3 /* Pods-MaozinhaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaozinhaTests.release.xcconfig"; path = "Target Support Files/Pods-MaozinhaTests/Pods-MaozinhaTests.release.xcconfig"; sourceTree = "<group>"; };
+		A717C5B1256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFontSettingsTutorialView.swift; sourceTree = "<group>"; };
+		A717C5C0256BF54F00744A90 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		A783571B25641C0A0063DF2A /* Maozinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maozinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A783571E25641C0A0063DF2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A783572025641C0A0063DF2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A717C5B0256BF33200744A90 /* TutorialViews */ = {
+			isa = PBXGroup;
+			children = (
+				A717C5B1256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift */,
+			);
+			path = TutorialViews;
+			sourceTree = "<group>";
+		};
+		A717C5B6256BF3CA00744A90 /* UIElementViews */ = {
+			isa = PBXGroup;
+			children = (
+				A717C5C0256BF54F00744A90 /* ProgressBarView.swift */,
+			);
+			path = UIElementViews;
+			sourceTree = "<group>";
+		};
+		A717C5B7256BF3E000744A90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A717C5B6256BF3CA00744A90 /* UIElementViews */,
+				A717C5B0256BF33200744A90 /* TutorialViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A783571225641C0A0063DF2A = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +176,7 @@
 				A783571E25641C0A0063DF2A /* AppDelegate.swift */,
 				A783572025641C0A0063DF2A /* SceneDelegate.swift */,
 				A783572225641C0A0063DF2A /* ViewController.swift */,
+				A717C5B7256BF3E000744A90 /* Views */,
 				A783572425641C0A0063DF2A /* Main.storyboard */,
 				A783572A25641C0D0063DF2A /* Assets.xcassets */,
 				A783572C25641C0D0063DF2A /* LaunchScreen.storyboard */,
@@ -406,9 +436,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A783572925641C0A0063DF2A /* Maozinha.xcdatamodeld in Sources */,
+				A717C5B2256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift in Sources */,
 				A783572325641C0A0063DF2A /* ViewController.swift in Sources */,
 				A783571F25641C0A0063DF2A /* AppDelegate.swift in Sources */,
 				A783572125641C0A0063DF2A /* SceneDelegate.swift in Sources */,
+				A717C5C1256BF54F00744A90 /* ProgressBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
