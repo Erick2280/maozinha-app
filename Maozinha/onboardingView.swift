@@ -19,7 +19,7 @@ struct onboardingView: View {
             ZStack {
                 if (currentStep == 0) {
                     VStack {
-                        Image("SampleScreenshot")
+                        Image("onboarding1")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .padding()
@@ -32,13 +32,16 @@ struct onboardingView: View {
                             )
                             .overlay(
                                 GeometryReader { geometry in
-                                    Button(action: moveToNextStep) {
-                                        Circle()
-                                            .fill(Color("ButtonBackground"))
-                                            .opacity(0.4)
-                                            .frame(width: 50, height: 50)
-                                    }
-                                    .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.1)
+                                    
+                                    Circle()
+                                        .fill(Color("ButtonBackground"))
+                                        .opacity(0.4)
+                                        .frame(width: 45, height: 45)
+                                        .gesture(DragGesture()
+                                                    .onEnded({ (value) in
+                                                        if value.startLocation.y < value.location.y { moveToNextStep() }
+                                                    }))
+                                        .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.070)
                                 }
                             ).padding(.top, 8)
                         
@@ -60,7 +63,7 @@ struct onboardingView: View {
                 }
                 if (currentStep == 1) {
                     VStack {
-                        Image("SampleScreenshot")
+                        Image("onboarding2")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .padding()
@@ -72,13 +75,14 @@ struct onboardingView: View {
                             .frame(width: 400, height: 600
                             ).overlay(
                                 GeometryReader { geometry in
-                                    Button(action: moveToNextStep) {
+                                    Button(action: moveToNextStep){
                                         Circle()
                                             .fill(Color("ButtonBackground"))
                                             .opacity(0.4)
-                                            .frame(width: 50, height: 50)
+                                            .frame(width: 45, height: 45)
                                     }
-                                    .position(x: geometry.size.width * 0.45, y: geometry.size.height * 0.45)
+                                    
+                                    .position(x: geometry.size.width * 0.43, y: geometry.size.height * 0.4225)
                                 }
                             ).padding(.top, 8)
                         
