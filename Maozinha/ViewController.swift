@@ -10,7 +10,7 @@ import SwiftUI
 
 class ViewController: UIViewController {
     
-    let onboardingViewController = UIHostingController(rootView: onboardingView())
+    let onboardingViewController = UIHostingController(rootView: OnboardingView())
 
     override func viewDidLoad() {
         super.viewDidLoad()
