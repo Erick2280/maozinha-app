@@ -18,22 +18,17 @@ struct mainMenu: View {
                     .padding(.leading, 22.0)
                 Spacer()
             }
-            VStack{
-                HStack{
-                    //greenCard()
-                    //pinkCard()
-                    test()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 300, height: 900)
-                    testcyan()
-                    
-                    
+            GeometryReader { geometry in
+                VStack{
+                    HStack{
+                        testcyan()
+                            .frame(width: (geometry.size.width / 2.2),
+                                   height: (geometry.size.height / 5))
+                        test()
+                            .frame(width: (geometry.size.width / 2.2),
+                                   height: (geometry.size.height / 5))
+                    }
                 }
-                //HStack{
-                   // yellowCard()
-                   // cyanCard()
-                    
-                //}
             }
         }
     }
