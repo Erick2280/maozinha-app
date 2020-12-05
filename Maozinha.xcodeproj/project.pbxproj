@@ -7,13 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		033DED76257ADB7100ADF405 /* testcyan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033DED75257ADB7100ADF405 /* testcyan.swift */; };
-		03AE95D6257AA12600947C62 /* pinkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE95D5257AA12600947C62 /* pinkCard.swift */; };
-		03AE95E2257AB15F00947C62 /* cyanCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE95E1257AB15F00947C62 /* cyanCard.swift */; };
-		03AE95ED257AB34800947C62 /* yellowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE95EC257AB34800947C62 /* yellowCard.swift */; };
-		03AE95F2257AB87000947C62 /* greenCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE95F1257AB87000947C62 /* greenCard.swift */; };
 		03AE95F7257ABBAD00947C62 /* mainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE95F6257ABBAD00947C62 /* mainMenu.swift */; };
-		03AE95FC257ACB1A00947C62 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE95FB257ACB1A00947C62 /* test.swift */; };
+		03DB6CD1257AF27300C285A4 /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB6CD0257AF27300C285A4 /* card.swift */; };
 		1B6947D4DEF67CEFA4A81756 /* Pods_Maozinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6574B3975E056373B3CBAEDB /* Pods_Maozinha.framework */; };
 		85843847467D6C006981B7D6 /* Pods_Maozinha_MaozinhaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42F166CCC9E20C74E5B77A8B /* Pods_Maozinha_MaozinhaUITests.framework */; };
 		A717C5B2256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717C5B1256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift */; };
@@ -56,13 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		033DED75257ADB7100ADF405 /* testcyan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testcyan.swift; sourceTree = "<group>"; };
-		03AE95D5257AA12600947C62 /* pinkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinkCard.swift; sourceTree = "<group>"; };
-		03AE95E1257AB15F00947C62 /* cyanCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cyanCard.swift; sourceTree = "<group>"; };
-		03AE95EC257AB34800947C62 /* yellowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yellowCard.swift; sourceTree = "<group>"; };
-		03AE95F1257AB87000947C62 /* greenCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = greenCard.swift; sourceTree = "<group>"; };
 		03AE95F6257ABBAD00947C62 /* mainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainMenu.swift; sourceTree = "<group>"; };
-		03AE95FB257ACB1A00947C62 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		03DB6CD0257AF27300C285A4 /* card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = card.swift; sourceTree = "<group>"; };
 		3A25D3E99D2B37DCD0EADC27 /* Pods-Maozinha-MaozinhaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maozinha-MaozinhaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Maozinha-MaozinhaUITests/Pods-Maozinha-MaozinhaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		42F166CCC9E20C74E5B77A8B /* Pods_Maozinha_MaozinhaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Maozinha_MaozinhaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B4B5EE327873695905C9AB /* Pods-MaozinhaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaozinhaTests.debug.xcconfig"; path = "Target Support Files/Pods-MaozinhaTests/Pods-MaozinhaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,13 +122,8 @@
 		03AE95D4257AA0BD00947C62 /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
-				03AE95D5257AA12600947C62 /* pinkCard.swift */,
-				03AE95FB257ACB1A00947C62 /* test.swift */,
-				03AE95E1257AB15F00947C62 /* cyanCard.swift */,
-				03AE95EC257AB34800947C62 /* yellowCard.swift */,
-				03AE95F1257AB87000947C62 /* greenCard.swift */,
 				03AE95F6257ABBAD00947C62 /* mainMenu.swift */,
-				033DED75257ADB7100ADF405 /* testcyan.swift */,
+				03DB6CD0257AF27300C285A4 /* card.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -473,20 +458,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03AE95D6257AA12600947C62 /* pinkCard.swift in Sources */,
 				A783572925641C0A0063DF2A /* Maozinha.xcdatamodeld in Sources */,
 				A717C5B2256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift in Sources */,
-				03AE95FC257ACB1A00947C62 /* test.swift in Sources */,
-				033DED76257ADB7100ADF405 /* testcyan.swift in Sources */,
+				03DB6CD1257AF27300C285A4 /* card.swift in Sources */,
 				03AE95F7257ABBAD00947C62 /* mainMenu.swift in Sources */,
-				03AE95ED257AB34800947C62 /* yellowCard.swift in Sources */,
 				A783572325641C0A0063DF2A /* ViewController.swift in Sources */,
 				A783571F25641C0A0063DF2A /* AppDelegate.swift in Sources */,
-				03AE95F2257AB87000947C62 /* greenCard.swift in Sources */,
 				E5D554EF256D355500BF9A83 /* OnboardingView.swift in Sources */,
 				A783572125641C0A0063DF2A /* SceneDelegate.swift in Sources */,
 				A717C5C1256BF54F00744A90 /* ProgressBarView.swift in Sources */,
-				03AE95E2257AB15F00947C62 /* cyanCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
