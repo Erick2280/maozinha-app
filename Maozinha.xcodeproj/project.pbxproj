@@ -27,6 +27,7 @@
 		A7A115D9256BEE4600FDE59F /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7A115CF256BEE3400FDE59F /* DMSans-Italic.ttf */; };
 		A7A115DA256BEE4600FDE59F /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7A115D0256BEE3400FDE59F /* DMSans-MediumItalic.ttf */; };
 		D229F1915A5796611D6BF42B /* Pods_MaozinhaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59975642A2BD3E5ECF20BBD8 /* Pods_MaozinhaTests.framework */; };
+		E55BA25C257E6A4F00CDB11E /* PhoneCallTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55BA25B257E6A4F00CDB11E /* PhoneCallTutorialView.swift */; };
 		E5A1EE8C257917B300D526F9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A1EE8B257917B300D526F9 /* CloudKit.framework */; };
 		E5D554EF256D355500BF9A83 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D554EE256D355500BF9A83 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		A7A115D2256BEE3400FDE59F /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 		A7A115D3256BEE3400FDE59F /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		A7A115D4256BEE3400FDE59F /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		E55BA25B257E6A4F00CDB11E /* PhoneCallTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCallTutorialView.swift; sourceTree = "<group>"; };
 		E5A1EE87257917AA00D526F9 /* Maozinha.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Maozinha.entitlements; sourceTree = "<group>"; };
 		E5A1EE8B257917B300D526F9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E5D554EE256D355500BF9A83 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				A717C5B1256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift */,
+				E55BA25B257E6A4F00CDB11E /* PhoneCallTutorialView.swift */,
 			);
 			path = TutorialViews;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				A783572925641C0A0063DF2A /* Maozinha.xcdatamodeld in Sources */,
 				A717C5B2256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift in Sources */,
 				A783572325641C0A0063DF2A /* ViewController.swift in Sources */,
+				E55BA25C257E6A4F00CDB11E /* PhoneCallTutorialView.swift in Sources */,
 				A783571F25641C0A0063DF2A /* AppDelegate.swift in Sources */,
 				E5D554EF256D355500BF9A83 /* OnboardingView.swift in Sources */,
 				A783572125641C0A0063DF2A /* SceneDelegate.swift in Sources */,
