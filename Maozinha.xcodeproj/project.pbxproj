@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03A7663A257EF5B400F8FD77 /* introScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A76639257EF5B400F8FD77 /* introScreenView.swift */; };
 		03AE95F7257ABBAD00947C62 /* mainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE95F6257ABBAD00947C62 /* mainMenu.swift */; };
 		03DB6CD1257AF27300C285A4 /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB6CD0257AF27300C285A4 /* card.swift */; };
 		1B6947D4DEF67CEFA4A81756 /* Pods_Maozinha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6574B3975E056373B3CBAEDB /* Pods_Maozinha.framework */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03A76639257EF5B400F8FD77 /* introScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introScreenView.swift; sourceTree = "<group>"; };
 		03AE95F6257ABBAD00947C62 /* mainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainMenu.swift; sourceTree = "<group>"; };
 		03DB6CD0257AF27300C285A4 /* card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = card.swift; sourceTree = "<group>"; };
 		3A25D3E99D2B37DCD0EADC27 /* Pods-Maozinha-MaozinhaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maozinha-MaozinhaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Maozinha-MaozinhaUITests/Pods-Maozinha-MaozinhaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		A717C5B7256BF3E000744A90 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03A76639257EF5B400F8FD77 /* introScreenView.swift */,
 				03AE95D4257AA0BD00947C62 /* MainMenu */,
 				E5D554EE256D355500BF9A83 /* OnboardingView.swift */,
 				A717C5B6256BF3CA00744A90 /* UIElementViews */,
@@ -461,6 +464,7 @@
 				A783572925641C0A0063DF2A /* Maozinha.xcdatamodeld in Sources */,
 				A717C5B2256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift in Sources */,
 				03DB6CD1257AF27300C285A4 /* card.swift in Sources */,
+				03A7663A257EF5B400F8FD77 /* introScreenView.swift in Sources */,
 				03AE95F7257ABBAD00947C62 /* mainMenu.swift in Sources */,
 				A783572325641C0A0063DF2A /* ViewController.swift in Sources */,
 				A783571F25641C0A0063DF2A /* AppDelegate.swift in Sources */,

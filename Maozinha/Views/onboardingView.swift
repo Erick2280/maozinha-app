@@ -139,7 +139,6 @@ struct OnboardingView: View {
                                             .foregroundColor(/*@START_MENU_TOKEN@*/Color("ButtonText")/*@END_MENU_TOKEN@*/)
                                     }
                                 })
-                            Spacer()
                             Button(action: restartTutorial, label: {
                                 Text("Fazer novamente")
                                     .underline()
@@ -147,7 +146,9 @@ struct OnboardingView: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(/*@START_MENU_TOKEN@*/Color("LinkText")/*@END_MENU_TOKEN@*/)
                             })
+                            .padding(.top, 10.0)
                             Spacer()
+                            
                         }
                         
                         
