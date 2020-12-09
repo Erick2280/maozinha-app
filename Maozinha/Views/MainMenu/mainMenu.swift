@@ -59,7 +59,8 @@ struct mainMenu: View {
                                 })
                             
                             NavigationLink(
-                                destination: Text("bbbbbbbb"),
+                                destination: NotDisturbTutorialView()
+                                    .navigationBarHidden(true),
                                 label: {
                                     card(colorStart: Binding.constant(colorStart[1]), colorEnd: Binding.constant(colorEnd[1]), title: Binding.constant(title[1]), colorTitle: Binding.constant(colorTitle[1]),sfSymbol: Binding.constant(sfSymbol[1]), icon: Binding.constant(icon[1]))
                                         .frame(width: (geometry.size.width / 2.2),
