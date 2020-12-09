@@ -35,7 +35,7 @@ struct OnboardingView: View {
                                     GeometryReader { geometry in
                                         
                                         Circle()
-                                            .fill(Color("ButtonBackground"))
+                                            .fill(Color(.white))
                                             .opacity(0.4)
                                             .frame(width: 45, height: 45)
                                             .gesture(DragGesture()
@@ -78,7 +78,7 @@ struct OnboardingView: View {
                                     GeometryReader { geometry in
                                         Button(action: moveToNextStep){
                                             Circle()
-                                                .fill(Color("ButtonBackground"))
+                                                .fill(Color(.white))
                                                 .opacity(0.4)
                                                 .frame(width: 45, height: 45)
                                         }
