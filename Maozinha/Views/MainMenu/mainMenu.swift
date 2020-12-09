@@ -84,7 +84,8 @@ struct mainMenu: View {
                                 })
                             
                             NavigationLink(
-                                destination: Text("ddddddddd"),
+                                destination: ChangeFontSettingsTutorialView()
+                                    .navigationBarHidden(true),
                                 label: {
                                     card(colorStart: Binding.constant(colorStart[3]), colorEnd: Binding.constant(colorEnd[3]), title: Binding.constant(title[3]), colorTitle: Binding.constant(colorTitle[3]), sfSymbol: Binding.constant(sfSymbol[3]), icon: Binding.constant(icon[3]))
                                         .frame(width: (geometry.size.width / 2.2),
