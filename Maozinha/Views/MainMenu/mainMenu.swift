@@ -46,7 +46,8 @@ struct mainMenu: View {
                     VStack(){
                         HStack(alignment: .bottom, spacing: 15.0){
                             NavigationLink(
-                                destination: Text("aaaaaaaa"),
+                                destination: PhoneCallTutorialView()
+                                    .navigationBarHidden(true),
                                 label: {
                                     card(colorStart: Binding.constant(colorStart[0]), colorEnd: Binding.constant(colorEnd[0]), title: Binding.constant(title[0]), colorTitle: Binding.constant(colorTitle[0]), sfSymbol: Binding.constant(sfSymbol[0]) , icon: Binding.constant(icon[0]))
                                         .frame(width: (geometry.size.width / 2.2),
