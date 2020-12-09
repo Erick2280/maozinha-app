@@ -34,7 +34,7 @@ struct PhoneCallTutorialView: View {
                                 GeometryReader { geometry in
                                     Button(action: moveToNextStep){
                                         Circle()
-                                            .fill(Color("ButtonBackground"))
+                                            .fill(Color(.white))
                                             .opacity(0.4)
                                             .frame(width: 60, height: 60)
                                     }
@@ -75,7 +75,7 @@ struct PhoneCallTutorialView: View {
                                 GeometryReader { geometry in
                                     Button(action: moveToNextStep){
                                         Circle()
-                                            .fill(Color("ButtonBackground"))
+                                            .fill(Color(.white))
                                             .opacity(0.4)
                                             .frame(width: 45, height: 45)
                                     }
@@ -113,7 +113,7 @@ struct PhoneCallTutorialView: View {
                                 GeometryReader { geometry in
                                     Button(action: moveToNextStep){
                                         Circle()
-                                            .fill(Color("ButtonBackground"))
+                                            .fill(Color(.white))
                                             .opacity(0.4)
                                             .frame(width: 60, height: 60)
                                     }
