@@ -165,8 +165,8 @@
 		A717C5B7256BF3E000744A90 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				03A76639257EF5B400F8FD77 /* introScreenView.swift */,
 				03AE95D4257AA0BD00947C62 /* MainMenu */,
+				03A76639257EF5B400F8FD77 /* introScreenView.swift */,
 				E5D554EE256D355500BF9A83 /* OnboardingView.swift */,
 				A717C5B6256BF3CA00744A90 /* UIElementViews */,
 				A717C5B0256BF33200744A90 /* TutorialViews */,

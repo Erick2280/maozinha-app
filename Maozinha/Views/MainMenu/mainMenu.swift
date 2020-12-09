@@ -17,20 +17,18 @@ struct mainMenu: View {
                                    "ElementPinkBackgroundEnd",
                                    "ElementYellowBackgroundEnd",
                                    "ElementCyanBackgroundEnd"]
-    @State private var title = ["Anúncios na\nInternet",
+    @State private var title = ["Telefone e         \nMensagens",
                                 "Notificações e\navisos",
-                                "Navegação e\nsegurança na\ninternet",
+                                "Navegação       \nno iPhone",
                                 "Configurações\ndo iPhone"]
     @State private var colorTitle = ["ElementGreenText",
                                      "ElementPinkText",
                                      "ElementYellowText",
                                      "ElementCyanText"]
-    @State private var threeLines = [false, false, true, false]
-    @State private var green = [true, false, false, false, false]
-    @State private var yellow = [false, false, true, false]
-    @State private var icon = ["IconWindow",
+    @State private var sfSymbol = [true, false, true, false]
+    @State private var icon = ["phone.fill",
                                "IconBell",
-                               "IconGlobe",
+                               "hand.point.up.left.fill",
                                "IconCog"]
     
     var body: some View {
@@ -45,41 +43,61 @@ struct mainMenu: View {
                     Spacer()
                 }
                 GeometryReader { geometry in
-                    VStack{
-                        HStack{
+                    VStack(){
+                        HStack(alignment: .bottom, spacing: 15.0){
                             NavigationLink(
                                 destination: Text("aaaaaaaa"),
                                 label: {
-                                    card(colorStart: Binding.constant(colorStart[0]), colorEnd: Binding.constant(colorEnd[0]), title: Binding.constant(title[0]), colorTitle: Binding.constant(colorTitle[0]), threeLines: Binding.constant(threeLines[0]), green: Binding.constant(green[0]), yellow: Binding.constant(yellow[0]), icon: Binding.constant(icon[0]))
+                                    card(colorStart: Binding.constant(colorStart[0]), colorEnd: Binding.constant(colorEnd[0]), title: Binding.constant(title[0]), colorTitle: Binding.constant(colorTitle[0]), sfSymbol: Binding.constant(sfSymbol[0]) , icon: Binding.constant(icon[0]))
                                         .frame(width: (geometry.size.width / 2.2),
                                                height: (geometry.size.height / 5))
+                                        .padding(.bottom, 55.0)
+                                        .padding(.top, -40.0)
+                                        .padding(.leading, -20)
+                                        .padding(.trailing, 15)
                                 })
+                            
                             NavigationLink(
                                 destination: Text("bbbbbbbb"),
                                 label: {
-                                    card(colorStart: Binding.constant(colorStart[1]), colorEnd: Binding.constant(colorEnd[1]), title: Binding.constant(title[1]), colorTitle: Binding.constant(colorTitle[1]), threeLines: Binding.constant(threeLines[1]), green: Binding.constant(green[1]), yellow: Binding.constant(yellow[1]), icon: Binding.constant(icon[1]))
+                                    card(colorStart: Binding.constant(colorStart[1]), colorEnd: Binding.constant(colorEnd[1]), title: Binding.constant(title[1]), colorTitle: Binding.constant(colorTitle[1]),sfSymbol: Binding.constant(sfSymbol[1]), icon: Binding.constant(icon[1]))
                                         .frame(width: (geometry.size.width / 2.2),
                                                height: (geometry.size.height / 5))
+                                        .padding(.bottom, 55.0)
+                                        .padding(.top, -40.0)
+                                        .padding(.leading, -20)
+                                        .padding(.trailing, 15)
                                 })
                         }
-                        HStack{
+                        HStack(alignment: .bottom, spacing: 15.0){
                             NavigationLink(
                                 destination: Text("ccccccccc"),
                                 label: {
-                                    card(colorStart: Binding.constant(colorStart[2]), colorEnd: Binding.constant(colorEnd[2]), title: Binding.constant(title[2]), colorTitle: Binding.constant(colorTitle[2]), threeLines: Binding.constant(threeLines[2]), green: Binding.constant(green[2]), yellow: Binding.constant(yellow[2]), icon: Binding.constant(icon[2]))
+                                    card(colorStart: Binding.constant(colorStart[2]), colorEnd: Binding.constant(colorEnd[2]), title: Binding.constant(title[2]), colorTitle: Binding.constant(colorTitle[2]), sfSymbol: Binding.constant(sfSymbol[2]), icon: Binding.constant(icon[2]))
                                         .frame(width: (geometry.size.width / 2.2),
                                                height: (geometry.size.height / 5))
+                                        .padding(.bottom, 55.0)
+                                        .padding(.top, -40.0)
+                                        .padding(.leading, -20)
+                                        .padding(.trailing, 15)
                                 })
+                            
                             NavigationLink(
                                 destination: Text("ddddddddd"),
                                 label: {
-                                    card(colorStart: Binding.constant(colorStart[3]), colorEnd: Binding.constant(colorEnd[3]), title: Binding.constant(title[3]), colorTitle: Binding.constant(colorTitle[3]), threeLines: Binding.constant(threeLines[3]), green: Binding.constant(green[3]), yellow: Binding.constant(yellow[3]), icon: Binding.constant(icon[3]))
+                                    card(colorStart: Binding.constant(colorStart[3]), colorEnd: Binding.constant(colorEnd[3]), title: Binding.constant(title[3]), colorTitle: Binding.constant(colorTitle[3]), sfSymbol: Binding.constant(sfSymbol[3]), icon: Binding.constant(icon[3]))
                                         .frame(width: (geometry.size.width / 2.2),
                                                height: (geometry.size.height / 5))
+                                        .padding(.bottom, 55.0)
+                                        .padding(.top, -40.0)
+                                        .padding(.leading, -20)
+                                        .padding(.trailing, 15)
                                 })
                         }
-                        .padding(.top, 40)
+                        .padding(.top, 20.0)
                     }
+                    .padding(.top, 15.0)
+                    .padding([.top, .leading, .trailing], 19.0)
                 }
             }.navigationBarHidden(true)
         }
