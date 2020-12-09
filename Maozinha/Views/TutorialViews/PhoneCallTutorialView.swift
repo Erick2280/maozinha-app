@@ -1,16 +1,16 @@
 //
-//  onboardingView.swift
+//  PhoneCallTutorialView.swift
 //  Maozinha
 //
-//  Created by Vítor Bárrios Luís de Albuquerque on 24/11/20.
+//  Created by Vítor Bárrios Luís de Albuquerque on 07/12/20.
 //
 
 import SwiftUI
 
-struct OnboardingView: View {
+struct PhoneCallTutorialView: View {
     @State var progress = 0.0
     @State var currentStep = 0
-    let allSteps = 2
+    let allSteps = 3
     
     var body: some View {
         NavigationView{
@@ -20,7 +20,7 @@ struct OnboardingView: View {
                 ZStack {
                     if (currentStep == 0) {
                         VStack {
-                            Image("onboarding1")
+                            Image("telefone1")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .padding()
@@ -33,28 +33,26 @@ struct OnboardingView: View {
                                 )
                                 .overlay(
                                     GeometryReader { geometry in
+                                        Button(action: moveToNextStep){
+                                            Circle()
+                                                .fill(Color(.white))
+                                                .opacity(0.4)
+                                                .frame(width: 60, height: 60)
+                                        }
                                         
-                                        Circle()
-                                            .fill(Color(.white))
-                                            .opacity(0.4)
-                                            .frame(width: 45, height: 45)
-                                            .gesture(DragGesture()
-                                                        .onEnded({ (value) in
-                                                            if value.startLocation.y < value.location.y { moveToNextStep() }
-                                                        }))
-                                            .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.070)
+                                        .position(x: geometry.size.width * 0.275, y: geometry.size.height * 0.905)
                                     }
                                 ).padding(.top, 8)
                             
                             Spacer()
                             
-                            Text("No Mãozinha, você interage com uma simulação nesta representação do seu iPhone.")
+                            Text("Vamos aprender a realizar uma chamada por telefone.")
                                 .font(.system(size: 18))
                                 .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
                                 .padding(8)
                             Spacer()
-                            Text("Vamos aprender a ativar e desativar o modo \"Não perturbe\". Comece deslizando o dedo de cima para baixo no local indicado.")
+                            Text("Na parte inferior esquerda da tela, toque no quadrado verde com a imagem de um telefone.")
                                 .font(.system(size: 18))
                                 .fontWeight(.bold)
                                 .multilineTextAlignment(.center)
@@ -64,7 +62,7 @@ struct OnboardingView: View {
                     }
                     if (currentStep == 1) {
                         VStack {
-                            Image("onboarding2")
+                            Image("telefone2")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .padding()
@@ -83,19 +81,57 @@ struct OnboardingView: View {
                                                 .frame(width: 45, height: 45)
                                         }
                                         
-                                        .position(x: geometry.size.width * 0.43, y: geometry.size.height * 0.4225)
+                                        .position(x: geometry.size.width * 0.745, y: geometry.size.height * 0.9125)
                                     }
                                 ).padding(.top, 8)
                             
                             Spacer()
                             
-                            Text("À medida que você avança no tutorial, a barra de progresso no topo é preenchida.")
+                            
+                            
+                            Text("Agora, ainda na parte inferior, à direita, toque no símbolo de \"teclado\".")
+                                .font(.system(size: 18))
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.center)
+                                .padding(.top, 8)
+                            Spacer()
+                        }
+                    }
+                    
+                    if (currentStep == 2) {
+                        VStack {
+                            Image("telefone3")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding()
+                                .overlay(
+                                    Image("PhoneFrame")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                )
+                                .frame(width: 400, height: 600
+                                ).overlay(
+                                    GeometryReader { geometry in
+                                        Button(action: moveToNextStep){
+                                            Circle()
+                                                .fill(Color(.white))
+                                                .opacity(0.4)
+                                                .frame(width: 60, height: 60)
+                                        }
+                                        
+                                        .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.7965)
+                                    }
+                                ).padding(.top, 8)
+                            
+                            Spacer()
+                            
+                            Text("Com o teclado aberto, você poderá inserir o número desejado.")
                                 .font(.system(size: 18))
                                 .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
                                 .padding(8)
                             
-                            Text("Toque no símbolo da lua para ativar o modo \"Não perturbe\" e finalizar o tutorial.")
+                            Text("Toque no botão verde para realizar a ligação e concluir o tutorial!")
                                 .font(.system(size: 18))
                                 .fontWeight(.bold)
                                 .multilineTextAlignment(.center)
@@ -104,7 +140,7 @@ struct OnboardingView: View {
                     }
                     
                     
-                    if (currentStep == 2) {
+                    if (currentStep == 3) {
                         VStack {
                             Image("ThumbsUp")
                                 .resizable()
@@ -117,16 +153,15 @@ struct OnboardingView: View {
                                 .foregroundColor(Color("TitleText"))
                                 .multilineTextAlignment(.center)
                                 .padding(16)
-                            Text("Você ativou o modo \"Não perturbe\" e concluiu o tutorial com sucesso!")
+                            Text("Você aprendeu a realizar uma ligação e concluiu o tutorial com sucesso!")
                                 .font(.system(size: 18))
                                 .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
                                 .padding(.horizontal, 16.0)
                             Spacer()
-                            
                             NavigationLink(
                                 destination: mainMenu()
-                                    .navigationBarHidden(true),
+                                    .navigationBarHidden(true) ,
                                 label: {
                                     ZStack{
                                         Rectangle()
@@ -139,6 +174,7 @@ struct OnboardingView: View {
                                             .foregroundColor(/*@START_MENU_TOKEN@*/Color("ButtonText")/*@END_MENU_TOKEN@*/)
                                     }
                                 })
+                            Spacer()
                             Button(action: restartTutorial, label: {
                                 Text("Fazer novamente")
                                     .underline()
@@ -146,9 +182,7 @@ struct OnboardingView: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(/*@START_MENU_TOKEN@*/Color("LinkText")/*@END_MENU_TOKEN@*/)
                             })
-                            .padding(.top, 10.0)
                             Spacer()
-                            
                         }
                         
                         
@@ -156,8 +190,9 @@ struct OnboardingView: View {
                     
                 }
                 .animation(.easeInOut)
-            }.padding()
+            }
             .navigationBarHidden(true)
+            .padding()
         }
     }
     
@@ -173,8 +208,8 @@ struct OnboardingView: View {
     }
 }
 
-struct OnboardingView_Previews: PreviewProvider {
+struct PhoneCallTutorialView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        PhoneCallTutorialView()
     }
 }
