@@ -10,7 +10,7 @@ import SwiftUI
 struct ChangeFontSettingsTutorialView: View {
     @State var progress = 0.0
     @State var currentStep = 0
-    let allSteps = 5
+    let allSteps = 6
     
     var body: some View {
         VStack() {
@@ -33,12 +33,19 @@ struct ChangeFontSettingsTutorialView: View {
                                 GeometryReader { geometry in
                                     Button(action: moveToNextStep){
                                         Circle()
-                                            .fill(Color("ButtonBackground"))
+                                            .fill(Color(.white))
                                             .opacity(0.4)
-                                            .frame(width: 45, height: 45)
+                                            .frame(width: 56, height: 56)
                                     }
                                     
                                     .position(x: geometry.size.width * 0.575, y: geometry.size.height * 0.588)
+                                    
+                                    Image(systemName: "hand.point.up.left.fill")
+                                        .font(.system(size: 48, weight: .bold, design: .default))
+                                        .foregroundColor(.white)
+                                        .padding(.top, 48)
+                                        .padding(.leading, 48)
+                                        .position(x: geometry.size.width * 0.575, y: geometry.size.height * 0.588)
                                 }
                             ).padding(.top, 8)
                         
@@ -71,12 +78,19 @@ struct ChangeFontSettingsTutorialView: View {
                                 GeometryReader { geometry in
                                     Button(action: moveToNextStep){
                                         Circle()
-                                            .fill(Color("ButtonBackground"))
+                                            .fill(Color(.white))
                                             .opacity(0.4)
                                             .frame(width: 24, height: 24)
                                     }
                                     
-                                    .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.76)
+                                    .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.695)
+                                    
+                                    Image(systemName: "hand.point.up.left.fill")
+                                        .font(.system(size: 48, weight: .bold, design: .default))
+                                        .foregroundColor(.white)
+                                        .padding(.top, 48)
+                                        .padding(.leading, 42)
+                                        .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.695)
                                 }
                             ).padding(.top, 8)
                         
@@ -103,19 +117,24 @@ struct ChangeFontSettingsTutorialView: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                             )
+                            .gesture(DragGesture()
+                                        .onEnded({ (value) in
+                                            if value.startLocation.y > value.location.y { moveToNextStep() }
+                                        }))
                             .frame(width: 400, height: 600
                             ).overlay(
                                 GeometryReader { geometry in
-                                    Circle()
-                                        .fill(Color("ButtonBackground"))
+                                    Rectangle()
+                                        .overlay(LinearGradient(gradient: Gradient(colors: [Color.white, Color.white.opacity(0)]), startPoint: .top, endPoint: .bottom))
                                         .opacity(0.4)
-                                        .frame(width: 45, height: 45)
-                                        .gesture(DragGesture()
-                                                    .onEnded({ (value) in
-                                                        if value.startLocation.y > value.location.y { moveToNextStep() }
-                                                    }))
+                                        .frame(width: 32, height: 128)
+                                        .cornerRadius(100)
+                                        .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.75)
                                     
-                                    .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.75)
+                                    Image(systemName: "arrow.up")
+                                        .font(.system(size: 20, weight: .bold, design: .default))
+                                        .foregroundColor(.white)
+                                        .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.75)
                                 }
                             ).padding(.top, 8)
                         
@@ -148,12 +167,18 @@ struct ChangeFontSettingsTutorialView: View {
                                 GeometryReader { geometry in
                                     Button(action: moveToNextStep){
                                         Circle()
-                                            .fill(Color("ButtonBackground"))
+                                            .fill(Color(.white))
                                             .opacity(0.4)
                                             .frame(width: 24, height: 24)
                                     }
                                     
-                                    .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.875)
+                                    .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.7)
+                                    Image(systemName: "hand.point.up.left.fill")
+                                        .font(.system(size: 48, weight: .bold, design: .default))
+                                        .foregroundColor(.white)
+                                        .padding(.top, 48)
+                                        .padding(.leading, 42)
+                                        .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.7)
                                 }
                             ).padding(.top, 8)
                         
@@ -184,16 +209,25 @@ struct ChangeFontSettingsTutorialView: View {
                             .frame(width: 400, height: 600
                             ).overlay(
                                 GeometryReader { geometry in
-                                    Circle()
-                                        .fill(Color("ButtonBackground"))
+                                    Rectangle()
+                                        .overlay(LinearGradient(gradient: Gradient(colors: [Color.white, Color.white.opacity(0)]), startPoint: .trailing, endPoint: .leading))
                                         .opacity(0.4)
-                                        .frame(width: 45, height: 45)
+                                        .frame(width: 128, height: 32)
+                                        .cornerRadius(100)
                                         .gesture(DragGesture()
                                                     .onEnded({ (value) in
                                                         if value.startLocation.x < value.location.x { moveToNextStep() }
                                                     }))
+                                        .position(x: geometry.size.width * 0.45, y: geometry.size.height * 0.877)
                                     
-                                    .position(x: geometry.size.width * 0.32, y: geometry.size.height * 0.877)
+                                    Image(systemName: "arrow.right")
+                                        .font(.system(size: 20, weight: .bold, design: .default))
+                                        .foregroundColor(.white)
+                                        .position(x: geometry.size.width * 0.38, y: geometry.size.height * 0.877)
+
+                                
+                                    
+
                                 }
                             ).padding(.top, 8)
                         
@@ -211,6 +245,41 @@ struct ChangeFontSettingsTutorialView: View {
                 }
                 
                 if (currentStep == 5) {
+                    VStack {
+                        Image("ChangeFontSettings5")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding()
+                            .overlay(
+                                Image("PhoneFrame")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            )
+                            .frame(width: 400, height: 600
+                            ).padding(.top, 8)
+                        
+                    Spacer()
+                    Text("Pronto! Agora, os textos no seu celular ficarão maiores.")
+                        .bold()
+                        .multilineTextAlignment(.center)
+                        .padding(8)
+                    Button(action: moveToNextStep, label: {
+                        ZStack{
+                            Rectangle()
+                                .frame(width: 300, height: 53, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/Color("ButtonBackground")/*@END_MENU_TOKEN@*/)
+                                .cornerRadius(10)
+                            Text("Avançar")
+                                .font(.system(size: 17))
+                                .fontWeight(.semibold)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/Color("ButtonText")/*@END_MENU_TOKEN@*/)
+                        }
+                    })
+                    }
+                    Spacer()
+                }
+                
+                if (currentStep == 6) {
                     VStack {
                     Image("ThumbsUp")
                         .resizable()

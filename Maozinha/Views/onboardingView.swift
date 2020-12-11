@@ -33,16 +33,21 @@ struct OnboardingView: View {
                                 )
                                 .overlay(
                                     GeometryReader { geometry in
-                                        
-                                        Circle()
-                                            .fill(Color(.white))
+                                        Rectangle()
+                                            .overlay(LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0), Color.white]), startPoint: .top, endPoint: .bottom))
                                             .opacity(0.4)
-                                            .frame(width: 45, height: 45)
+                                            .frame(width: 32, height: 128)
+                                            .cornerRadius(100)
                                             .gesture(DragGesture()
                                                         .onEnded({ (value) in
                                                             if value.startLocation.y < value.location.y { moveToNextStep() }
                                                         }))
-                                            .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.070)
+                                            .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.140)
+                                        
+                                        Image(systemName: "arrow.down")
+                                            .font(.system(size: 20, weight: .bold, design: .default))
+                                            .foregroundColor(.white)
+                                            .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.095)
                                     }
                                 ).padding(.top, 8)
                             
@@ -84,6 +89,13 @@ struct OnboardingView: View {
                                         }
                                         
                                         .position(x: geometry.size.width * 0.43, y: geometry.size.height * 0.4225)
+                                        
+                                        Image(systemName: "hand.point.up.left.fill")
+                                            .font(.system(size: 48, weight: .bold, design: .default))
+                                            .foregroundColor(.white)
+                                            .padding(.top, 54)
+                                            .padding(.leading, 42)
+                                            .position(x: geometry.size.width * 0.43, y: geometry.size.height * 0.4225)
                                     }
                                 ).padding(.top, 8)
                             

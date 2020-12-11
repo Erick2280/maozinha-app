@@ -41,6 +41,13 @@ struct PhoneCallTutorialView: View {
                                         }
                                         
                                         .position(x: geometry.size.width * 0.275, y: geometry.size.height * 0.905)
+                                        
+                                        Image(systemName: "hand.point.up.left.fill")
+                                            .font(.system(size: 48, weight: .bold, design: .default))
+                                            .foregroundColor(.white)
+                                            .padding(.top, 54)
+                                            .padding(.leading, 42)
+                                            .position(x: geometry.size.width * 0.275, y: geometry.size.height * 0.905)
                                     }
                                 ).padding(.top, 8)
                             
@@ -82,6 +89,13 @@ struct PhoneCallTutorialView: View {
                                         }
                                         
                                         .position(x: geometry.size.width * 0.745, y: geometry.size.height * 0.9125)
+                                        
+                                        Image(systemName: "hand.point.up.left.fill")
+                                            .font(.system(size: 48, weight: .bold, design: .default))
+                                            .foregroundColor(.white)
+                                            .padding(.top, 54)
+                                            .padding(.leading, 42)
+                                            .position(x: geometry.size.width * 0.745, y: geometry.size.height * 0.9125)
                                     }
                                 ).padding(.top, 8)
                             
@@ -120,6 +134,13 @@ struct PhoneCallTutorialView: View {
                                         }
                                         
                                         .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.7965)
+                                        
+                                        Image(systemName: "hand.point.up.left.fill")
+                                            .font(.system(size: 48, weight: .bold, design: .default))
+                                            .foregroundColor(.white)
+                                            .padding(.top, 54)
+                                            .padding(.leading, 42)
+                                            .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.7965)
                                     }
                                 ).padding(.top, 8)
                             
