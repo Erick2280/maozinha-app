@@ -10,6 +10,8 @@ import SwiftUI
 struct OnboardingView: View {
     @State var progress = 0.0
     @State var currentStep = 0
+    @State var fadeAnimate = false
+    
     let allSteps = 2
     
     var body: some View {
@@ -33,16 +35,28 @@ struct OnboardingView: View {
                                 )
                                 .overlay(
                                     GeometryReader { geometry in
-                                        
-                                        Circle()
-                                            .fill(Color(.white))
+                                        Rectangle()
+                                            .overlay(LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0), Color.white]), startPoint: .top, endPoint: .bottom))
                                             .opacity(0.4)
-                                            .frame(width: 45, height: 45)
+                                            .frame(width: 32, height: 128)
+                                            .cornerRadius(100)
                                             .gesture(DragGesture()
                                                         .onEnded({ (value) in
                                                             if value.startLocation.y < value.location.y { moveToNextStep() }
                                                         }))
-                                            .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.070)
+                                            .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.140)
+                                        
+                                        Image(systemName: "arrow.down")
+                                            .animation(nil)
+                                            .font(.system(size: 20, weight: .bold, design: .default))
+                                            .foregroundColor(.white)
+                                            .opacity(fadeAnimate ? 1 : 0)
+                                            .animation(Animation.easeInOut(duration: 1).repeatForever())
+                                            .onAppear {
+                                                fadeAnimate = true
+                                            }
+                                            .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.095)
+                                        
                                     }
                                 ).padding(.top, 8)
                             
@@ -81,9 +95,21 @@ struct OnboardingView: View {
                                                 .fill(Color(.white))
                                                 .opacity(0.4)
                                                 .frame(width: 45, height: 45)
+                                                .opacity(fadeAnimate ? 0 : 1)
+                                                .animation(Animation.easeInOut(duration: 1).repeatForever())
+                                                .onAppear {
+                                                    fadeAnimate = true
+                                                }
                                         }
                                         
                                         .position(x: geometry.size.width * 0.43, y: geometry.size.height * 0.4225)
+                                        
+                                        Image(systemName: "hand.point.up.left.fill")
+                                            .font(.system(size: 48, weight: .bold, design: .default))
+                                            .foregroundColor(.white)
+                                            .padding(.top, 54)
+                                            .padding(.leading, 42)
+                                            .position(x: geometry.size.width * 0.43, y: geometry.size.height * 0.4225)
                                     }
                                 ).padding(.top, 8)
                             
@@ -148,12 +174,8 @@ struct OnboardingView: View {
                             })
                             .padding(.top, 10.0)
                             Spacer()
-                            
                         }
-                        
-                        
                     }
-                    
                 }
                 .animation(.easeInOut)
             }.padding()
@@ -162,12 +184,13 @@ struct OnboardingView: View {
     }
     
     func moveToNextStep() {
+        fadeAnimate = false
         currentStep += 1
         progress = (Double(currentStep) / Double(allSteps))
     }
     
     func restartTutorial() {
-        
+        fadeAnimate = false
         currentStep = 0
         progress = (Double(currentStep) / Double(allSteps))
     }

@@ -10,24 +10,24 @@ import SwiftUI
 
 class ViewController: UIViewController {
     
-    let introScreenViewController = UIHostingController(rootView: introScreenView())
+    let SwitchViewController = UIHostingController(rootView: SwitchViews())
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        addChild(introScreenViewController)
-        view.addSubview(introScreenViewController.view)
+        addChild(SwitchViewController)
+        view.addSubview(SwitchViewController.view)
         setupConstraints()
         
     }
 
     fileprivate func setupConstraints() {
         
-        introScreenViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        introScreenViewController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        introScreenViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        introScreenViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        introScreenViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        SwitchViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        SwitchViewController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        SwitchViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        SwitchViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        SwitchViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
 
     }
 

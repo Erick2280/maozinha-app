@@ -1,13 +1,13 @@
 //
-//  introScreenView.swift
+//  SmallintroScreenView.swift
 //  Maozinha
 //
-//  Created by iris on 07/12/20.
+//  Created by iris on 10/12/20.
 //
 
 import SwiftUI
 
-struct introScreenView: View {
+struct SmallintroScreenView: View {
     var body: some View {
         NavigationView{
         VStack {
@@ -16,25 +16,23 @@ struct introScreenView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 252.0, height: 252.0)
-                .padding(.top, 55.0)
+                .padding(.top, -30)
                 .padding(.leading, 40)
             Spacer()
-            Text("Olá! Este é o Mãozinha.")
-                .font(.system(size: 48))
+            Text("Olá! Este é o\nMãozinha.")
+                .font(.largeTitle)
                 .fontWeight(.heavy)
                 .foregroundColor(Color("MainGradientEnd"))
                 .multilineTextAlignment(.center)
-                .padding(.top, 50.0)
+                .padding(.top, 15.0)
             
             Text("Aqui você vai aprender a utilizar seu iPhone de forma fácil e tranquila!")
                 .font(.system(size: 18))
                 .multilineTextAlignment(.center)
-                .padding(.top)
                 .frame(width: /*@START_MENU_TOKEN@*/311/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            Spacer()
             NavigationLink(
                 destination:
-                    OnboardingView()
+                    SmallOnboardingView()
                     .navigationBarHidden(true),
                 label: {
                     ZStack{
@@ -45,11 +43,12 @@ struct introScreenView: View {
                         Text("Iniciar Tutorial")
                             .fontWeight(.semibold)
                             .font(.system(size: 17))
-                            .foregroundColor(Color("ButtonText"))                }
+                            .foregroundColor(Color("ButtonText"))
+                    }
                 })
-            Spacer()
+            //Spacer()
             NavigationLink(
-                destination: mainMenu()
+                destination: SmallMainMenu()
                     .navigationBarHidden(true),
                 label: {
                     Text("Pular")
@@ -59,15 +58,14 @@ struct introScreenView: View {
                         .multilineTextAlignment(.center)
                 })
             Spacer()
+            Spacer()
         }
         }.navigationBarHidden(true)
     }
 }
 
-struct introScreenView_Previews: PreviewProvider {
+struct SmallintroScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            introScreenView()
-        }
+        SmallintroScreenView()
     }
 }
