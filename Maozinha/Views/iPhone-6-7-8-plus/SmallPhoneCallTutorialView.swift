@@ -16,8 +16,7 @@ struct SmallPhoneCallTutorialView: View {
     
     
     var body: some View {
-        NavigationView{
-            VStack() {
+        VStack() {
                 ProgressBarView(progress: $progress).padding(.horizontal).frame(height: 16)
                 
                 ZStack {
@@ -232,8 +231,6 @@ struct SmallPhoneCallTutorialView: View {
                     }
                 }
                 .animation(.easeInOut)
-            }
-            .navigationBarHidden(true)
         }
     }
     

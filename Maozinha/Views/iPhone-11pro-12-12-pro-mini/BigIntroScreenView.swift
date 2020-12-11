@@ -1,13 +1,13 @@
 //
-//  introScreenView.swift
+//  BigIntroScreenView.swift
 //  Maozinha
 //
-//  Created by iris on 07/12/20.
+//  Created by iris on 11/12/20.
 //
 
 import SwiftUI
 
-struct introScreenView: View {
+struct BigIntroScreenView: View {
     var body: some View {
         NavigationView{
         VStack {
@@ -34,7 +34,7 @@ struct introScreenView: View {
             //Spacer()
             NavigationLink(
                 destination:
-                    OnboardingView()
+                    BigOnboardingView()
                     .navigationBarHidden(true),
                 label: {
                     ZStack{
@@ -49,7 +49,7 @@ struct introScreenView: View {
                 })
             //Spacer()
             NavigationLink(
-                destination: mainMenu()
+                destination: BigMainMenu()
                     .navigationBarHidden(true),
                 label: {
                     Text("Pular")
@@ -64,12 +64,8 @@ struct introScreenView: View {
     }
 }
 
-struct introScreenView_Previews: PreviewProvider {
+struct BigIntroScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            introScreenView()
-            introScreenView()
-                .previewDevice("iPhone 11")
-        }
+        BigIntroScreenView()
     }
 }

@@ -1,13 +1,13 @@
 //
-//  NotDisturbTutorialView.swift
+//  SmallOnboardingView.swift
 //  Maozinha
 //
-//  Created by iris on 09/12/20.
+//  Created by iris on 10/12/20.
 //
 
 import SwiftUI
 
-struct NotDisturbTutorialView: View {
+struct SmallOnboardingView: View {
     @State var progress = 0.0
     @State var currentStep = 0
     @State var fadeAnimate = false
@@ -15,8 +15,9 @@ struct NotDisturbTutorialView: View {
     let allSteps = 2
     
     var body: some View {
-            VStack() {
-                ProgressBarView(progress: $progress).frame(height: 16)
+            VStack {
+                
+                ProgressBarView(progress: $progress).padding(.horizontal).frame(height: 16)
                 
                 ZStack {
                     if (currentStep == 0) {
@@ -29,21 +30,22 @@ struct NotDisturbTutorialView: View {
                                     Image("PhoneFrame")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
+                                        .padding(.horizontal, 3.0)
                                 )
-                                .frame(width: 400, height: 600
+                                .frame(width: 210, height: 405
                                 )
                                 .overlay(
                                     GeometryReader { geometry in
                                         Rectangle()
                                             .overlay(LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0), Color.white]), startPoint: .top, endPoint: .bottom))
                                             .opacity(0.4)
-                                            .frame(width: 32, height: 128)
+                                            .frame(width: 29, height: 100)
                                             .cornerRadius(100)
                                             .gesture(DragGesture()
                                                         .onEnded({ (value) in
                                                             if value.startLocation.y < value.location.y { moveToNextStep() }
                                                         }))
-                                            .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.140)
+                                            .position(x: geometry.size.width * 0.82, y: geometry.size.height * 0.153)
                                         
                                         Image(systemName: "arrow.down")
                                             .animation(nil)
@@ -54,26 +56,24 @@ struct NotDisturbTutorialView: View {
                                             .onAppear {
                                                 fadeAnimate = true
                                             }
-                                            .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.095)
-                                        
+                                            .position(x: geometry.size.width * 0.82, y: geometry.size.height * 0.095)
                                     }
-                                ).padding(.top, 8)
+                                ).padding(.top, 20)
                             
-                            Spacer()
-                            
-                            Text("Vamos aprender a ativar e desativar o modo \"Não perturbe\". ")
-                                .font(.system(size: 18))
+                            Text("No Mãozinha, você interage com uma simulação nesta representação do seu iPhone.")
+                                .font(.callout)
                                 .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
-                                .padding(8)
+                                .padding(.top, 20)
+                                .padding(.bottom, 9.0)
+                                .padding(.horizontal)
                             
-                            Text("Comece deslizando o dedo de cima para baixo no local indicado.")
-                                .font(.system(size: 18))
-                                .fontWeight(.bold)
+                            Text("Vamos aprender a ativar e desativar o modo \"Não perturbe\". Comece deslizando o dedo de cima para baixo no local indicado.")
+                                .bold()
                                 .multilineTextAlignment(.center)
-                                .padding(.horizontal, 12.0)
+                                .padding(8)
+                            Spacer()
                         }
-                        
                     }
                     if (currentStep == 1) {
                         VStack {
@@ -85,15 +85,16 @@ struct NotDisturbTutorialView: View {
                                     Image("PhoneFrame")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
+                                        .padding(.horizontal, 3.0)
                                 )
-                                .frame(width: 400, height: 600
+                                .frame(width: 210, height: 405
                                 ).overlay(
                                     GeometryReader { geometry in
                                         Button(action: moveToNextStep){
                                             Circle()
                                                 .fill(Color(.white))
                                                 .opacity(0.4)
-                                                .frame(width: 45, height: 45)
+                                                .frame(width: 30, height: 30)
                                                 .opacity(fadeAnimate ? 0 : 1)
                                                 .animation(Animation.easeInOut(duration: 1).repeatForever())
                                                 .onAppear {
@@ -101,24 +102,29 @@ struct NotDisturbTutorialView: View {
                                                 }
                                         }
                                         
-                                        .position(x: geometry.size.width * 0.43, y: geometry.size.height * 0.4225)
+                                        .position(x: geometry.size.width * 0.41, y: geometry.size.height * 0.4225)
                                         
                                         Image(systemName: "hand.point.up.left.fill")
-                                            .font(.system(size: 48, weight: .bold, design: .default))
+                                            .font(.system(size: 40, weight: .bold, design: .default))
                                             .foregroundColor(.white)
                                             .padding(.top, 54)
                                             .padding(.leading, 42)
-                                            .position(x: geometry.size.width * 0.43, y: geometry.size.height * 0.4225)
+                                            .position(x: geometry.size.width * 0.40, y: geometry.size.height * 0.4215)
                                     }
-                                ).padding(.top, 8)
+                                ).padding(.top, 20)
                             
-                            Spacer()
+                            Text("À medida que você avança no tutorial, a barra de progresso no topo é preenchida.")
+                                .font(.callout)
+                                .fontWeight(.regular)
+                                .multilineTextAlignment(.center)
+                                .padding(.top, 20)
+                                .padding(.bottom, 9.0)
+                                .padding(.horizontal)
                             
-                            Text("Toque no símbolo da lua para ativar o modo \"Não perturbe\".")
-                                .font(.system(size: 18))
+                            Text("Toque no símbolo da lua para ativar o modo \"Não perturbe\" e finalizar o tutorial.")
+                                .font(.callout)
                                 .fontWeight(.bold)
                                 .multilineTextAlignment(.center)
-                                .padding(8)
                             Spacer()
                         }
                     }
@@ -129,23 +135,24 @@ struct NotDisturbTutorialView: View {
                             Image("ThumbsUp")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .padding(64)
+                                .padding(.horizontal, 80.0)
+                                .padding(.top, 30)
                             Spacer()
                             Text("Tudo certo!")
                                 .font(.system(size: 48))
                                 .fontWeight(.heavy)
                                 .foregroundColor(Color("TitleText"))
                                 .multilineTextAlignment(.center)
-                                .padding(16)
+                                .padding(.top, 20)
                             Text("Você ativou o modo \"Não perturbe\" e concluiu o tutorial com sucesso!")
                                 .font(.system(size: 18))
                                 .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
+                                .padding(.top, 8)
                                 .padding(.horizontal, 16.0)
-                            Spacer()
                             
                             NavigationLink(
-                                destination: mainMenu()
+                                destination: SmallMainMenu()
                                     .navigationBarHidden(true),
                                 label: {
                                     ZStack{
@@ -166,17 +173,12 @@ struct NotDisturbTutorialView: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(/*@START_MENU_TOKEN@*/Color("LinkText")/*@END_MENU_TOKEN@*/)
                             })
-                            .padding(.top, 10.0)
-                            Spacer()
-                            
+                            .padding(.bottom, 28.0)
                         }
-                        
-                        
                     }
-                    
                 }
                 .animation(.easeInOut)
-            }.padding()
+        }
     }
     
     func moveToNextStep() {
@@ -192,8 +194,8 @@ struct NotDisturbTutorialView: View {
     }
 }
 
-struct NotDisturbTutorialView_Previews: PreviewProvider {
+struct SmallOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        NotDisturbTutorialView()
+        SmallOnboardingView()
     }
 }
