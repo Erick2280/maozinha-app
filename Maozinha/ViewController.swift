@@ -10,7 +10,7 @@ import SwiftUI
 
 class ViewController: UIViewController {
     
-    let introScreenViewController = UIHostingController(rootView: introScreenView())
+    let introScreenViewController = UIHostingController(rootView: SwitchViews())
 
     override func viewDidLoad() {
         super.viewDidLoad()
