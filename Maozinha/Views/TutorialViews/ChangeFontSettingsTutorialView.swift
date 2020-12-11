@@ -10,6 +10,8 @@ import SwiftUI
 struct ChangeFontSettingsTutorialView: View {
     @State var progress = 0.0
     @State var currentStep = 0
+    @State var fadeAnimate = false
+
     let allSteps = 6
     
     var body: some View {
@@ -36,6 +38,11 @@ struct ChangeFontSettingsTutorialView: View {
                                             .fill(Color(.white))
                                             .opacity(0.4)
                                             .frame(width: 56, height: 56)
+                                            .opacity(fadeAnimate ? 0 : 1)
+                                            .animation(Animation.easeInOut(duration: 1).repeatForever())
+                                            .onAppear {
+                                                fadeAnimate = true
+                                            }
                                     }
                                     
                                     .position(x: geometry.size.width * 0.575, y: geometry.size.height * 0.588)
@@ -81,6 +88,11 @@ struct ChangeFontSettingsTutorialView: View {
                                             .fill(Color(.white))
                                             .opacity(0.4)
                                             .frame(width: 24, height: 24)
+                                            .opacity(fadeAnimate ? 0 : 1)
+                                            .animation(Animation.easeInOut(duration: 1).repeatForever())
+                                            .onAppear {
+                                                fadeAnimate = true
+                                            }
                                     }
                                     
                                     .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.695)
@@ -134,6 +146,11 @@ struct ChangeFontSettingsTutorialView: View {
                                     Image(systemName: "arrow.up")
                                         .font(.system(size: 20, weight: .bold, design: .default))
                                         .foregroundColor(.white)
+                                        .opacity(fadeAnimate ? 0 : 1)
+                                        .animation(Animation.easeInOut(duration: 1).repeatForever())
+                                        .onAppear {
+                                            fadeAnimate = true
+                                        }
                                         .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.75)
                                 }
                             ).padding(.top, 8)
@@ -170,6 +187,11 @@ struct ChangeFontSettingsTutorialView: View {
                                             .fill(Color(.white))
                                             .opacity(0.4)
                                             .frame(width: 24, height: 24)
+                                            .opacity(fadeAnimate ? 0 : 1)
+                                            .animation(Animation.easeInOut(duration: 1).repeatForever())
+                                            .onAppear {
+                                                fadeAnimate = true
+                                            }
                                     }
                                     
                                     .position(x: geometry.size.width * 0.3, y: geometry.size.height * 0.7)
@@ -223,6 +245,11 @@ struct ChangeFontSettingsTutorialView: View {
                                     Image(systemName: "arrow.right")
                                         .font(.system(size: 20, weight: .bold, design: .default))
                                         .foregroundColor(.white)
+                                        .opacity(fadeAnimate ? 0 : 1)
+                                        .animation(Animation.easeInOut(duration: 1).repeatForever())
+                                        .onAppear {
+                                            fadeAnimate = true
+                                        }
                                         .position(x: geometry.size.width * 0.38, y: geometry.size.height * 0.877)
 
                                 
@@ -332,11 +359,13 @@ struct ChangeFontSettingsTutorialView: View {
     }
     
     func moveToNextStep() {
+        fadeAnimate = false
         currentStep += 1
         progress = (Double(currentStep) / Double(allSteps))
     }
     
     func restartTutorial() {
+        fadeAnimate = false
         currentStep = 0
         progress = (Double(currentStep) / Double(allSteps))
     }

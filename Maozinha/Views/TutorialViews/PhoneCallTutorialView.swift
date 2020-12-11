@@ -10,7 +10,10 @@ import SwiftUI
 struct PhoneCallTutorialView: View {
     @State var progress = 0.0
     @State var currentStep = 0
+    @State var fadeAnimate = false
+    
     let allSteps = 3
+    
     
     var body: some View {
         NavigationView{
@@ -37,12 +40,19 @@ struct PhoneCallTutorialView: View {
                                             Circle()
                                                 .fill(Color(.white))
                                                 .opacity(0.4)
+                                                .animation(nil)
                                                 .frame(width: 60, height: 60)
+                                                .opacity(fadeAnimate ? 1 : 0)
+                                                .animation(Animation.easeInOut(duration: 1).repeatForever())
+                                                .onAppear {
+                                                    fadeAnimate = true
+                                                }
                                         }
                                         
                                         .position(x: geometry.size.width * 0.275, y: geometry.size.height * 0.905)
                                         
                                         Image(systemName: "hand.point.up.left.fill")
+                                            .animation(nil)
                                             .font(.system(size: 48, weight: .bold, design: .default))
                                             .foregroundColor(.white)
                                             .padding(.top, 54)
@@ -86,6 +96,12 @@ struct PhoneCallTutorialView: View {
                                                 .fill(Color(.white))
                                                 .opacity(0.4)
                                                 .frame(width: 45, height: 45)
+                                                .opacity(fadeAnimate ? 0 : 1)
+                                                .animation(Animation.easeInOut(duration: 1).repeatForever())
+                                                .onAppear {
+                                                    fadeAnimate = true
+                                                }
+                                            
                                         }
                                         
                                         .position(x: geometry.size.width * 0.745, y: geometry.size.height * 0.9125)
@@ -131,6 +147,11 @@ struct PhoneCallTutorialView: View {
                                                 .fill(Color(.white))
                                                 .opacity(0.4)
                                                 .frame(width: 60, height: 60)
+                                                .opacity(fadeAnimate ? 0 : 1)
+                                                .animation(Animation.easeInOut(duration: 1).repeatForever())
+                                                .onAppear {
+                                                    fadeAnimate = true
+                                                }
                                         }
                                         
                                         .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.7965)
@@ -218,12 +239,13 @@ struct PhoneCallTutorialView: View {
     }
     
     func moveToNextStep() {
+        fadeAnimate = false
         currentStep += 1
         progress = (Double(currentStep) / Double(allSteps))
     }
     
     func restartTutorial() {
-        
+        fadeAnimate = false
         currentStep = 0
         progress = (Double(currentStep) / Double(allSteps))
     }

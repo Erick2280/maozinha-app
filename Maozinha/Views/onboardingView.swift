@@ -10,6 +10,8 @@ import SwiftUI
 struct OnboardingView: View {
     @State var progress = 0.0
     @State var currentStep = 0
+    @State var fadeAnimate = false
+    
     let allSteps = 2
     
     var body: some View {
@@ -45,9 +47,16 @@ struct OnboardingView: View {
                                             .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.140)
                                         
                                         Image(systemName: "arrow.down")
+                                            .animation(nil)
                                             .font(.system(size: 20, weight: .bold, design: .default))
                                             .foregroundColor(.white)
+                                            .opacity(fadeAnimate ? 1 : 0)
+                                            .animation(Animation.easeInOut(duration: 1).repeatForever())
+                                            .onAppear {
+                                                fadeAnimate = true
+                                            }
                                             .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.095)
+                                        
                                     }
                                 ).padding(.top, 8)
                             
@@ -86,6 +95,11 @@ struct OnboardingView: View {
                                                 .fill(Color(.white))
                                                 .opacity(0.4)
                                                 .frame(width: 45, height: 45)
+                                                .opacity(fadeAnimate ? 0 : 1)
+                                                .animation(Animation.easeInOut(duration: 1).repeatForever())
+                                                .onAppear {
+                                                    fadeAnimate = true
+                                                }
                                         }
                                         
                                         .position(x: geometry.size.width * 0.43, y: geometry.size.height * 0.4225)
@@ -174,12 +188,13 @@ struct OnboardingView: View {
     }
     
     func moveToNextStep() {
+        fadeAnimate = false
         currentStep += 1
         progress = (Double(currentStep) / Double(allSteps))
     }
     
     func restartTutorial() {
-        
+        fadeAnimate = false
         currentStep = 0
         progress = (Double(currentStep) / Double(allSteps))
     }
