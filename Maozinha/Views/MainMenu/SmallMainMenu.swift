@@ -48,7 +48,7 @@ struct SmallMainMenu: View {
                     VStack(){
                         HStack(alignment: .bottom, spacing: 20){
                             NavigationLink(
-                                destination: PhoneCallTutorialView()
+                                destination: SmallPhoneCallTutorialView()
                                     .navigationBarHidden(true),
                                 label: {
                                     SmallCard(colorStart: Binding.constant(colorStart[0]), colorEnd: Binding.constant(colorEnd[0]), title: Binding.constant(title[0]), colorTitle: Binding.constant(colorTitle[0]), sfSymbol: Binding.constant(sfSymbol[0]) , icon: Binding.constant(icon[0]))
@@ -61,7 +61,7 @@ struct SmallMainMenu: View {
                                 })
                             
                             NavigationLink(
-                                destination: NotDisturbTutorialView()
+                                destination: SmallNotDisturbTutorialView()
                                     .navigationBarHidden(true),
                                 label: {
                                     SmallCard(colorStart: Binding.constant(colorStart[1]), colorEnd: Binding.constant(colorEnd[1]), title: Binding.constant(title[1]), colorTitle: Binding.constant(colorTitle[1]),sfSymbol: Binding.constant(sfSymbol[1]), icon: Binding.constant(icon[1]))
