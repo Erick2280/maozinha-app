@@ -15,7 +15,6 @@ struct OnboardingView: View {
     let allSteps = 2
     
     var body: some View {
-        NavigationView{
             VStack() {
                 ProgressBarView(progress: $progress).frame(height: 16)
                 
@@ -179,8 +178,6 @@ struct OnboardingView: View {
                 }
                 .animation(.easeInOut)
             }.padding()
-            .navigationBarHidden(true)
-        }
     }
     
     func moveToNextStep() {

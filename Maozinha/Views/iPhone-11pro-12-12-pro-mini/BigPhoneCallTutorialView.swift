@@ -1,13 +1,13 @@
 //
-//  PhoneCallTutorialView.swift
+//  BigPhoneCallTutorialView.swift
 //  Maozinha
 //
-//  Created by Vítor Bárrios Luís de Albuquerque on 07/12/20.
+//  Created by iris on 11/12/20.
 //
 
 import SwiftUI
 
-struct PhoneCallTutorialView: View {
+struct BigPhoneCallTutorialView: View {
     @State var progress = 0.0
     @State var currentStep = 0
     @State var fadeAnimate = false
@@ -31,7 +31,7 @@ struct PhoneCallTutorialView: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                             )
-                            .frame(width: 400, height: 600
+                            .frame(width: 350, height: 550
                             )
                             .overlay(
                                 GeometryReader { geometry in
@@ -63,16 +63,16 @@ struct PhoneCallTutorialView: View {
                         Spacer()
                         
                         Text("Vamos aprender a realizar uma chamada por telefone.")
-                            .font(.system(size: 18))
+                            .font(.system(size: 16))
                             .fontWeight(.regular)
                             .multilineTextAlignment(.center)
-                            .padding(8)
-                        Spacer()
+    
                         Text("Na parte inferior esquerda da tela, toque no quadrado verde com a imagem de um telefone.")
-                            .font(.system(size: 18))
+                            .font(.system(size: 16))
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
-                            .padding(.horizontal, 12.0)
+                            .padding(.top, 8)
+                        Spacer()
                     }
                     
                 }
@@ -87,7 +87,7 @@ struct PhoneCallTutorialView: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                             )
-                            .frame(width: 400, height: 600
+                            .frame(width: 350, height: 550
                             ).overlay(
                                 GeometryReader { geometry in
                                     Button(action: moveToNextStep){
@@ -119,7 +119,7 @@ struct PhoneCallTutorialView: View {
                         
                         
                         Text("Agora, ainda na parte inferior, à direita, toque no símbolo de \"teclado\".")
-                            .font(.system(size: 18))
+                            .font(.system(size: 16))
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
                             .padding(.top, 8)
@@ -138,7 +138,7 @@ struct PhoneCallTutorialView: View {
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                             )
-                            .frame(width: 400, height: 600
+                            .frame(width: 350, height: 550
                             ).overlay(
                                 GeometryReader { geometry in
                                     Button(action: moveToNextStep){
@@ -167,16 +167,16 @@ struct PhoneCallTutorialView: View {
                         Spacer()
                         
                         Text("Com o teclado aberto, você poderá inserir o número desejado.")
-                            .font(.system(size: 18))
+                            .font(.system(size: 16))
                             .fontWeight(.regular)
                             .multilineTextAlignment(.center)
-                            .padding(8)
                         
                         Text("Toque no botão verde para realizar a ligação e concluir o tutorial!")
-                            .font(.system(size: 18))
+                            .font(.system(size: 16))
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
-                            .padding(8)
+                            .padding(.top, 8)
+                        Spacer()
                     }
                 }
                 
@@ -201,7 +201,7 @@ struct PhoneCallTutorialView: View {
                             .padding(.horizontal, 16.0)
                         Spacer()
                         NavigationLink(
-                            destination: mainMenu()
+                            destination: BigMainMenu()
                                 .navigationBarHidden(true) ,
                             label: {
                                 ZStack{
@@ -226,7 +226,7 @@ struct PhoneCallTutorialView: View {
                     }
                 }
             }.animation(.easeInOut)
-        }.padding()
+        }.padding(.horizontal)
     }
     
     func moveToNextStep() {
@@ -241,9 +241,8 @@ struct PhoneCallTutorialView: View {
         progress = (Double(currentStep) / Double(allSteps))
     }
 }
-
-struct PhoneCallTutorialView_Previews: PreviewProvider {
+struct BigPhoneCallTutorialView_Previews: PreviewProvider {
     static var previews: some View {
-        PhoneCallTutorialView()
+        BigPhoneCallTutorialView()
     }
 }

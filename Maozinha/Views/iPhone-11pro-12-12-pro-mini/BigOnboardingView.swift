@@ -1,5 +1,5 @@
 //
-//  SmallNotDisturbTutorialView.swift
+//  BigOnboardingView.swift
 //  Maozinha
 //
 //  Created by iris on 11/12/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SmallNotDisturbTutorialView: View {
+struct BigOnboardingView: View {
     @State var progress = 0.0
     @State var currentStep = 0
     @State var fadeAnimate = false
@@ -15,9 +15,8 @@ struct SmallNotDisturbTutorialView: View {
     let allSteps = 2
     
     var body: some View {
-        NavigationView{
             VStack() {
-                ProgressBarView(progress: $progress).padding(.horizontal).frame(height: 16)
+                ProgressBarView(progress: $progress).frame(height: 16)
                 
                 ZStack {
                     if (currentStep == 0) {
@@ -30,22 +29,21 @@ struct SmallNotDisturbTutorialView: View {
                                     Image("PhoneFrame")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .padding(.horizontal, 3.0)
                                 )
-                                .frame(width: 210, height: 405
+                                .frame(width: 350, height: 550
                                 )
                                 .overlay(
                                     GeometryReader { geometry in
                                         Rectangle()
                                             .overlay(LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0), Color.white]), startPoint: .top, endPoint: .bottom))
                                             .opacity(0.4)
-                                            .frame(width: 29, height: 100)
+                                            .frame(width: 32, height: 128)
                                             .cornerRadius(100)
                                             .gesture(DragGesture()
                                                         .onEnded({ (value) in
                                                             if value.startLocation.y < value.location.y { moveToNextStep() }
                                                         }))
-                                            .position(x: geometry.size.width * 0.82, y: geometry.size.height * 0.153)
+                                            .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.140)
                                         
                                         Image(systemName: "arrow.down")
                                             .animation(nil)
@@ -56,22 +54,24 @@ struct SmallNotDisturbTutorialView: View {
                                             .onAppear {
                                                 fadeAnimate = true
                                             }
-                                            .position(x: geometry.size.width * 0.82, y: geometry.size.height * 0.095)
+                                            .position(x: geometry.size.width * 0.75, y: geometry.size.height * 0.095)
+                                        
                                     }
-                                ).padding(.top, 20)
+                                ).padding(.top, 8)
                             
-                            Text("Vamos aprender a ativar e desativar o modo \"Não perturbe\". ")
-                                .font(.callout)
+                            Spacer()
+                            
+                            Text("No Mãozinha, você interage com uma simulação nesta representação do seu iPhone.")
+                                .font(.system(size: 16))
                                 .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
-                                .padding(.top, 20)
-                                .padding(.bottom, 9.0)
-                                .padding(.horizontal)
+                                //.padding(.horizontal, 8)
                             
-                            Text("Comece deslizando o dedo de cima para baixo no local indicado.")
-                                .bold()
+                            Text("Vamos aprender a ativar e desativar o modo \"Não perturbe\". Comece deslizando o dedo de cima para baixo no local indicado.")
+                                .font(.system(size: 16))
+                                .fontWeight(.bold)
                                 .multilineTextAlignment(.center)
-                                .padding(8)
+                                .padding(.top, 9.0)
                             Spacer()
                         }
                         
@@ -86,16 +86,15 @@ struct SmallNotDisturbTutorialView: View {
                                     Image("PhoneFrame")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .padding(.horizontal, 3.0)
                                 )
-                                .frame(width: 210, height: 405
+                                .frame(width: 350, height: 550
                                 ).overlay(
                                     GeometryReader { geometry in
                                         Button(action: moveToNextStep){
                                             Circle()
                                                 .fill(Color(.white))
                                                 .opacity(0.4)
-                                                .frame(width: 30, height: 30)
+                                                .frame(width: 45, height: 45)
                                                 .opacity(fadeAnimate ? 0 : 1)
                                                 .animation(Animation.easeInOut(duration: 1).repeatForever())
                                                 .onAppear {
@@ -103,25 +102,30 @@ struct SmallNotDisturbTutorialView: View {
                                                 }
                                         }
                                         
-                                        .position(x: geometry.size.width * 0.41, y: geometry.size.height * 0.4225)
+                                        .position(x: geometry.size.width * 0.425, y: geometry.size.height * 0.4223)
                                         
                                         Image(systemName: "hand.point.up.left.fill")
-                                            .font(.system(size: 40, weight: .bold, design: .default))
+                                            .font(.system(size: 48, weight: .bold, design: .default))
                                             .foregroundColor(.white)
                                             .padding(.top, 54)
                                             .padding(.leading, 42)
-                                            .position(x: geometry.size.width * 0.40, y: geometry.size.height * 0.4215)
+                                            .position(x: geometry.size.width * 0.43, y: geometry.size.height * 0.4225)
                                     }
-                                ).padding(.top, 20)
+                                ).padding(.top, 8)
                             
-                            Text("Toque no símbolo da lua para ativar o modo \"Não perturbe\".")
-                                .font(.callout)
+                            Spacer()
+                            
+                            Text("À medida que você avança no tutorial, a barra de progresso no topo é preenchida.")
+                                .font(.system(size: 16))
+                                .fontWeight(.regular)
+                                .multilineTextAlignment(.center)
+                                //.padding(8)
+                            
+                            Text("Toque no símbolo da lua para ativar o modo \"Não perturbe\" e finalizar o tutorial.")
+                                .font(.system(size: 16))
                                 .fontWeight(.bold)
                                 .multilineTextAlignment(.center)
-                                .padding(.top, 20)
-                                .padding(.bottom, 9.0)
-                                .padding(.horizontal)
-                            
+                                .padding(.top, 9)
                             Spacer()
                         }
                     }
@@ -132,24 +136,23 @@ struct SmallNotDisturbTutorialView: View {
                             Image("ThumbsUp")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .padding(.horizontal, 80.0)
-                                .padding(.top, 30)
+                                .padding(64)
                             Spacer()
                             Text("Tudo certo!")
                                 .font(.system(size: 48))
                                 .fontWeight(.heavy)
                                 .foregroundColor(Color("TitleText"))
                                 .multilineTextAlignment(.center)
-                                .padding(.top, 20)
+                                .padding(16)
                             Text("Você ativou o modo \"Não perturbe\" e concluiu o tutorial com sucesso!")
-                                .font(.system(size: 18))
+                                .font(.system(size: 16))
                                 .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
-                                .padding(.top, 8)
                                 .padding(.horizontal, 16.0)
+                            Spacer()
                             
                             NavigationLink(
-                                destination: SmallMainMenu()
+                                destination: BigMainMenu()
                                     .navigationBarHidden(true),
                                 label: {
                                     ZStack{
@@ -170,14 +173,13 @@ struct SmallNotDisturbTutorialView: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(/*@START_MENU_TOKEN@*/Color("LinkText")/*@END_MENU_TOKEN@*/)
                             })
-                            .padding(.bottom, 28.0)
+                            .padding(.top, 10.0)
+                            Spacer()
                         }
                     }
                 }
-            }
-            .animation(.easeInOut)
-            .navigationBarHidden(true)
-        }
+                .animation(.easeInOut)
+            }.padding(.horizontal)
     }
     
     func moveToNextStep() {
@@ -192,8 +194,10 @@ struct SmallNotDisturbTutorialView: View {
         progress = (Double(currentStep) / Double(allSteps))
     }
 }
-struct SmallNotDisturbTutorialView_Previews: PreviewProvider {
+
+
+struct BigOnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        SmallNotDisturbTutorialView()
+        BigOnboardingView()
     }
 }

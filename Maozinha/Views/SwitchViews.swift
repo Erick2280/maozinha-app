@@ -9,13 +9,24 @@ import SwiftUI
 
 struct SwitchViews: View {
     var body: some View {
-            GeometryReader { proxy in
-                if (proxy.size.height > 736) { //iPhone 8 plus resolution in points
-                introScreenView()
-              } else {
-                SmallintroScreenView()
-              }
+        GeometryReader { proxy in
+            
+            if (proxy.size.height == 734.0 || proxy.size.height == 763.0 || proxy.size.height == 728.0){
+                BigIntroScreenView()
             }
+            else if (proxy.size.height > 716) { //iPhone 8 plus resolution in points
+                introScreenView()
+//                Print("------- tamanho do height ---------")
+//                Print(proxy.size.height)
+//                Print("-----------------------------------")
+            }
+            else {
+                SmallintroScreenView()
+//                Print("------- tamanho do height ---------")
+//                Print(proxy.size.height)
+//                Print("-----------------------------------")
+            }
+        }
     }
 }
 

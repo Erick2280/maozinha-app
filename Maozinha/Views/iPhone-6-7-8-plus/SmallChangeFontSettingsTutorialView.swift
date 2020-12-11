@@ -285,9 +285,9 @@ struct SmallChangeFontSettingsTutorialView: View {
                             .font(.callout)
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
+                            .padding(.horizontal)
                         Spacer()
                     }
-                    
                 }
                 
                 if (currentStep == 5) {
