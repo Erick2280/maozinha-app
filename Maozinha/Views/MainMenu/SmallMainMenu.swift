@@ -87,7 +87,7 @@ struct SmallMainMenu: View {
                                 })
                             
                             NavigationLink(
-                                destination: ChangeFontSettingsTutorialView()
+                                destination: SmallChangeFontSettingsTutorialView()
                                     .navigationBarHidden(true),
                                 label: {
                                     SmallCard(colorStart: Binding.constant(colorStart[3]), colorEnd: Binding.constant(colorEnd[3]), title: Binding.constant(title[3]), colorTitle: Binding.constant(colorTitle[3]), sfSymbol: Binding.constant(sfSymbol[3]), icon: Binding.constant(icon[3]))

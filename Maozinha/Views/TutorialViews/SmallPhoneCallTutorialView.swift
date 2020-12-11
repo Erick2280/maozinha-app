@@ -1,13 +1,13 @@
 //
-//  PhoneCallTutorialView.swift
+//  SmallPhoneCallTutorialView.swift
 //  Maozinha
 //
-//  Created by Vítor Bárrios Luís de Albuquerque on 07/12/20.
+//  Created by iris on 11/12/20.
 //
 
 import SwiftUI
 
-struct PhoneCallTutorialView: View {
+struct SmallPhoneCallTutorialView: View {
     @State var progress = 0.0
     @State var currentStep = 0
     @State var fadeAnimate = false
@@ -18,7 +18,7 @@ struct PhoneCallTutorialView: View {
     var body: some View {
         NavigationView{
             VStack() {
-                ProgressBarView(progress: $progress).frame(height: 16)
+                ProgressBarView(progress: $progress).padding(.horizontal).frame(height: 16)
                 
                 ZStack {
                     if (currentStep == 0) {
@@ -31,8 +31,9 @@ struct PhoneCallTutorialView: View {
                                     Image("PhoneFrame")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
+                                        .padding(.horizontal, 3.0)
                                 )
-                                .frame(width: 400, height: 600
+                                .frame(width: 210, height: 405
                                 )
                                 .overlay(
                                     GeometryReader { geometry in
@@ -41,7 +42,7 @@ struct PhoneCallTutorialView: View {
                                                 .fill(Color(.white))
                                                 .opacity(0.4)
                                                 .animation(nil)
-                                                .frame(width: 60, height: 60)
+                                                .frame(width: 30, height: 30)
                                                 .opacity(fadeAnimate ? 1 : 0)
                                                 .animation(Animation.easeInOut(duration: 1).repeatForever())
                                                 .onAppear {
@@ -49,31 +50,31 @@ struct PhoneCallTutorialView: View {
                                                 }
                                         }
                                         
-                                        .position(x: geometry.size.width * 0.275, y: geometry.size.height * 0.905)
+                                        .position(x: geometry.size.width * 0.22, y: geometry.size.height * 0.89)
                                         
                                         Image(systemName: "hand.point.up.left.fill")
                                             .animation(nil)
-                                            .font(.system(size: 48, weight: .bold, design: .default))
+                                            .font(.system(size: 40, weight: .bold, design: .default))
                                             .foregroundColor(.white)
                                             .padding(.top, 54)
                                             .padding(.leading, 42)
-                                            .position(x: geometry.size.width * 0.275, y: geometry.size.height * 0.905)
+                                            .position(x: geometry.size.width * 0.22, y: geometry.size.height * 0.88)
                                     }
-                                ).padding(.top, 8)
-                            
-                            Spacer()
+                                ).padding(.top, 20)
                             
                             Text("Vamos aprender a realizar uma chamada por telefone.")
-                                .font(.system(size: 18))
+                                .font(.callout)
                                 .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
-                                .padding(8)
-                            Spacer()
+                                .padding(.top, 20)
+                                .padding(.bottom, 9.0)
+                                .padding(.horizontal)
                             Text("Na parte inferior esquerda da tela, toque no quadrado verde com a imagem de um telefone.")
-                                .font(.system(size: 18))
+                                .font(.callout)
                                 .fontWeight(.bold)
+                                .padding(.horizontal)
                                 .multilineTextAlignment(.center)
-                                .padding(.horizontal, 12.0)
+                            Spacer()
                         }
                         
                     }
@@ -87,15 +88,16 @@ struct PhoneCallTutorialView: View {
                                     Image("PhoneFrame")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
+                                        .padding(.horizontal, 3.0)
                                 )
-                                .frame(width: 400, height: 600
+                                .frame(width: 210, height: 405
                                 ).overlay(
                                     GeometryReader { geometry in
                                         Button(action: moveToNextStep){
                                             Circle()
                                                 .fill(Color(.white))
                                                 .opacity(0.4)
-                                                .frame(width: 45, height: 45)
+                                                .frame(width: 30, height: 30)
                                                 .opacity(fadeAnimate ? 0 : 1)
                                                 .animation(Animation.easeInOut(duration: 1).repeatForever())
                                                 .onAppear {
@@ -104,26 +106,24 @@ struct PhoneCallTutorialView: View {
                                             
                                         }
                                         
-                                        .position(x: geometry.size.width * 0.745, y: geometry.size.height * 0.9125)
+                                        .position(x: geometry.size.width * 0.8, y: geometry.size.height * 0.9)
                                         
                                         Image(systemName: "hand.point.up.left.fill")
-                                            .font(.system(size: 48, weight: .bold, design: .default))
+                                            .font(.system(size: 40, weight: .bold, design: .default))
                                             .foregroundColor(.white)
                                             .padding(.top, 54)
                                             .padding(.leading, 42)
-                                            .position(x: geometry.size.width * 0.745, y: geometry.size.height * 0.9125)
+                                            .position(x: geometry.size.width * 0.8, y: geometry.size.height * 0.9)
                                     }
-                                ).padding(.top, 8)
-                            
-                            Spacer()
-                            
-                            
-                            
+                                ).padding(.top, 20)
+        
                             Text("Agora, ainda na parte inferior, à direita, toque no símbolo de \"teclado\".")
-                                .font(.system(size: 18))
-                                .fontWeight(.bold)
+                                .font(.callout)
+                                .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
-                                .padding(.top, 8)
+                                .padding(.top, 20)
+                                .padding(.bottom, 9.0)
+                                .padding(.horizontal)
                             Spacer()
                         }
                     }
@@ -138,15 +138,16 @@ struct PhoneCallTutorialView: View {
                                     Image("PhoneFrame")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
+                                        .padding(.horizontal, 3.0)
                                 )
-                                .frame(width: 400, height: 600
+                                .frame(width: 210, height: 405
                                 ).overlay(
                                     GeometryReader { geometry in
                                         Button(action: moveToNextStep){
                                             Circle()
                                                 .fill(Color(.white))
                                                 .opacity(0.4)
-                                                .frame(width: 60, height: 60)
+                                                .frame(width: 37, height: 37)
                                                 .opacity(fadeAnimate ? 0 : 1)
                                                 .animation(Animation.easeInOut(duration: 1).repeatForever())
                                                 .onAppear {
@@ -157,27 +158,27 @@ struct PhoneCallTutorialView: View {
                                         .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.7965)
                                         
                                         Image(systemName: "hand.point.up.left.fill")
-                                            .font(.system(size: 48, weight: .bold, design: .default))
+                                            .font(.system(size: 40, weight: .bold, design: .default))
                                             .foregroundColor(.white)
                                             .padding(.top, 54)
                                             .padding(.leading, 42)
                                             .position(x: geometry.size.width * 0.5, y: geometry.size.height * 0.7965)
                                     }
-                                ).padding(.top, 8)
-                            
-                            Spacer()
-                            
+                                ).padding(.top, 20)
+                          
                             Text("Com o teclado aberto, você poderá inserir o número desejado.")
-                                .font(.system(size: 18))
+                                .font(.callout)
                                 .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
-                                .padding(8)
+                                .padding(.top, 20)
+                                .padding(.bottom, 9.0)
+                                .padding(.horizontal)
                             
                             Text("Toque no botão verde para realizar a ligação e concluir o tutorial!")
-                                .font(.system(size: 18))
+                                .font(.callout)
                                 .fontWeight(.bold)
                                 .multilineTextAlignment(.center)
-                                .padding(8)
+                            Spacer()
                         }
                     }
                     
@@ -187,22 +188,25 @@ struct PhoneCallTutorialView: View {
                             Image("ThumbsUp")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .padding(64)
+                                .padding(.horizontal, 80.0)
+                                .padding(.top, 30)
                             Spacer()
                             Text("Tudo certo!")
                                 .font(.system(size: 48))
                                 .fontWeight(.heavy)
                                 .foregroundColor(Color("TitleText"))
                                 .multilineTextAlignment(.center)
-                                .padding(16)
+                                .padding(.top, 20)
                             Text("Você aprendeu a realizar uma ligação e concluiu o tutorial com sucesso!")
                                 .font(.system(size: 18))
                                 .fontWeight(.regular)
                                 .multilineTextAlignment(.center)
+                                .padding(.top, 8)
                                 .padding(.horizontal, 16.0)
+                            
                             Spacer()
                             NavigationLink(
-                                destination: mainMenu()
+                                destination: SmallMainMenu()
                                     .navigationBarHidden(true) ,
                                 label: {
                                     ZStack{
@@ -216,7 +220,6 @@ struct PhoneCallTutorialView: View {
                                             .foregroundColor(/*@START_MENU_TOKEN@*/Color("ButtonText")/*@END_MENU_TOKEN@*/)
                                     }
                                 })
-                            Spacer()
                             Button(action: restartTutorial, label: {
                                 Text("Fazer novamente")
                                     .underline()
@@ -224,17 +227,13 @@ struct PhoneCallTutorialView: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(/*@START_MENU_TOKEN@*/Color("LinkText")/*@END_MENU_TOKEN@*/)
                             })
-                            Spacer()
+                            .padding(.bottom, 28.0)
                         }
-                        
-                        
                     }
-                    
                 }
                 .animation(.easeInOut)
             }
             .navigationBarHidden(true)
-            .padding()
         }
     }
     
@@ -251,8 +250,8 @@ struct PhoneCallTutorialView: View {
     }
 }
 
-struct PhoneCallTutorialView_Previews: PreviewProvider {
+struct SmallPhoneCallTutorialView_Previews: PreviewProvider {
     static var previews: some View {
-        PhoneCallTutorialView()
+        SmallPhoneCallTutorialView()
     }
 }
