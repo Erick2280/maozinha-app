@@ -1,13 +1,13 @@
 //
-//  mainMenu.swift
+//  SwiftUIView.swift
 //  Maozinha
 //
-//  Created by iris on 04/12/20.
+//  Created by iris on 10/12/20.
 //
 
 import SwiftUI
 
-struct mainMenu: View {
+struct SmallMainMenu: View {
     
     @State private var colorStart = ["ElementGreenBackgroundStart",
                                      "ElementPinkBackgroundStart",
@@ -42,14 +42,16 @@ struct mainMenu: View {
                         .padding([.top, .leading], 22.0)
                     Spacer()
                 }
+                .padding(.leading, 6.0)
+                
                 GeometryReader { geometry in
                     VStack(){
-                        HStack(alignment: .bottom, spacing: 15.0){
+                        HStack(alignment: .bottom, spacing: 20){
                             NavigationLink(
                                 destination: PhoneCallTutorialView()
                                     .navigationBarHidden(true),
                                 label: {
-                                    card(colorStart: Binding.constant(colorStart[0]), colorEnd: Binding.constant(colorEnd[0]), title: Binding.constant(title[0]), colorTitle: Binding.constant(colorTitle[0]), sfSymbol: Binding.constant(sfSymbol[0]) , icon: Binding.constant(icon[0]))
+                                    SmallCard(colorStart: Binding.constant(colorStart[0]), colorEnd: Binding.constant(colorEnd[0]), title: Binding.constant(title[0]), colorTitle: Binding.constant(colorTitle[0]), sfSymbol: Binding.constant(sfSymbol[0]) , icon: Binding.constant(icon[0]))
                                         .frame(width: (geometry.size.width / 2.2),
                                                height: (geometry.size.height / 5))
                                         .padding(.bottom, 55.0)
@@ -62,7 +64,7 @@ struct mainMenu: View {
                                 destination: NotDisturbTutorialView()
                                     .navigationBarHidden(true),
                                 label: {
-                                    card(colorStart: Binding.constant(colorStart[1]), colorEnd: Binding.constant(colorEnd[1]), title: Binding.constant(title[1]), colorTitle: Binding.constant(colorTitle[1]),sfSymbol: Binding.constant(sfSymbol[1]), icon: Binding.constant(icon[1]))
+                                    SmallCard(colorStart: Binding.constant(colorStart[1]), colorEnd: Binding.constant(colorEnd[1]), title: Binding.constant(title[1]), colorTitle: Binding.constant(colorTitle[1]),sfSymbol: Binding.constant(sfSymbol[1]), icon: Binding.constant(icon[1]))
                                         .frame(width: (geometry.size.width / 2.2),
                                                height: (geometry.size.height / 5))
                                         .padding(.bottom, 55.0)
@@ -71,11 +73,11 @@ struct mainMenu: View {
                                         .padding(.trailing, 15)
                                 })
                         }
-                        HStack(alignment: .bottom, spacing: 15.0){
+                        HStack(alignment: .bottom, spacing: 20){
                             NavigationLink(
                                 destination: Text(""),
                                 label: {
-                                    card(colorStart: Binding.constant(colorStart[2]), colorEnd: Binding.constant(colorEnd[2]), title: Binding.constant(title[2]), colorTitle: Binding.constant(colorTitle[2]), sfSymbol: Binding.constant(sfSymbol[2]), icon: Binding.constant(icon[2]))
+                            SmallCard(colorStart: Binding.constant(colorStart[2]), colorEnd: Binding.constant(colorEnd[2]), title: Binding.constant(title[2]), colorTitle: Binding.constant(colorTitle[2]), sfSymbol: Binding.constant(sfSymbol[2]), icon: Binding.constant(icon[2]))
                                         .frame(width: (geometry.size.width / 2.2),
                                                height: (geometry.size.height / 5))
                                         .padding(.bottom, 55.0)
@@ -88,7 +90,7 @@ struct mainMenu: View {
                                 destination: ChangeFontSettingsTutorialView()
                                     .navigationBarHidden(true),
                                 label: {
-                                    card(colorStart: Binding.constant(colorStart[3]), colorEnd: Binding.constant(colorEnd[3]), title: Binding.constant(title[3]), colorTitle: Binding.constant(colorTitle[3]), sfSymbol: Binding.constant(sfSymbol[3]), icon: Binding.constant(icon[3]))
+                                    SmallCard(colorStart: Binding.constant(colorStart[3]), colorEnd: Binding.constant(colorEnd[3]), title: Binding.constant(title[3]), colorTitle: Binding.constant(colorTitle[3]), sfSymbol: Binding.constant(sfSymbol[3]), icon: Binding.constant(icon[3]))
                                         .frame(width: (geometry.size.width / 2.2),
                                                height: (geometry.size.height / 5))
                                         .padding(.bottom, 55.0)
@@ -100,15 +102,16 @@ struct mainMenu: View {
                         .padding(.top, 20.0)
                     }
                     .padding(.top, 15.0)
-                    .padding([.top, .leading, .trailing], 19.0)
+                    .padding(.leading, 11)
+                    .padding(.top, 19.0)
                 }
-            }.navigationBarHidden(true)
+            }.padding(.trailing, 30.0).navigationBarHidden(true)
         }
     }
 }
 
-struct mainMenu_Previews: PreviewProvider {
+struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        mainMenu()
+        SmallMainMenu()
     }
 }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0371DBDE25817B86006C5CEE /* NotDisturbTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0371DBDD25817B86006C5CEE /* NotDisturbTutorialView.swift */; };
+		038B48312582EF33006B3445 /* SwitchViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038B48302582EF33006B3445 /* SwitchViews.swift */; };
+		038B48472582F8B6006B3445 /* SmallintroScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038B48462582F8B6006B3445 /* SmallintroScreenView.swift */; };
+		038B484C2582FCA1006B3445 /* SmallMainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038B484B2582FCA1006B3445 /* SmallMainMenu.swift */; };
+		038B48542582FF7F006B3445 /* SmallCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038B48532582FF7F006B3445 /* SmallCard.swift */; };
 		03A7663A257EF5B400F8FD77 /* introScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A76639257EF5B400F8FD77 /* introScreenView.swift */; };
 		03AE95F7257ABBAD00947C62 /* mainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE95F6257ABBAD00947C62 /* mainMenu.swift */; };
 		03DB6CD1257AF27300C285A4 /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB6CD0257AF27300C285A4 /* card.swift */; };
@@ -55,6 +59,10 @@
 
 /* Begin PBXFileReference section */
 		0371DBDD25817B86006C5CEE /* NotDisturbTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotDisturbTutorialView.swift; sourceTree = "<group>"; };
+		038B48302582EF33006B3445 /* SwitchViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViews.swift; sourceTree = "<group>"; };
+		038B48462582F8B6006B3445 /* SmallintroScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallintroScreenView.swift; sourceTree = "<group>"; };
+		038B484B2582FCA1006B3445 /* SmallMainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallMainMenu.swift; sourceTree = "<group>"; };
+		038B48532582FF7F006B3445 /* SmallCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCard.swift; sourceTree = "<group>"; };
 		03A76639257EF5B400F8FD77 /* introScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introScreenView.swift; sourceTree = "<group>"; };
 		03AE95F6257ABBAD00947C62 /* mainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainMenu.swift; sourceTree = "<group>"; };
 		03DB6CD0257AF27300C285A4 /* card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = card.swift; sourceTree = "<group>"; };
@@ -130,6 +138,8 @@
 			children = (
 				03AE95F6257ABBAD00947C62 /* mainMenu.swift */,
 				03DB6CD0257AF27300C285A4 /* card.swift */,
+				038B484B2582FCA1006B3445 /* SmallMainMenu.swift */,
+				038B48532582FF7F006B3445 /* SmallCard.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
@@ -168,9 +178,11 @@
 		A717C5B7256BF3E000744A90 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				03AE95D4257AA0BD00947C62 /* MainMenu */,
+				038B48302582EF33006B3445 /* SwitchViews.swift */,
+				038B48462582F8B6006B3445 /* SmallintroScreenView.swift */,
 				03A76639257EF5B400F8FD77 /* introScreenView.swift */,
 				E5D554EE256D355500BF9A83 /* OnboardingView.swift */,
+				03AE95D4257AA0BD00947C62 /* MainMenu */,
 				A717C5B6256BF3CA00744A90 /* UIElementViews */,
 				A717C5B0256BF33200744A90 /* TutorialViews */,
 			);
@@ -469,6 +481,7 @@
 			files = (
 				A783572925641C0A0063DF2A /* Maozinha.xcdatamodeld in Sources */,
 				A717C5B2256BF3BA00744A90 /* ChangeFontSettingsTutorialView.swift in Sources */,
+				038B48312582EF33006B3445 /* SwitchViews.swift in Sources */,
 				03DB6CD1257AF27300C285A4 /* card.swift in Sources */,
 				03A7663A257EF5B400F8FD77 /* introScreenView.swift in Sources */,
 				03AE95F7257ABBAD00947C62 /* mainMenu.swift in Sources */,
@@ -479,6 +492,9 @@
 				E5D554EF256D355500BF9A83 /* OnboardingView.swift in Sources */,
 				A783572125641C0A0063DF2A /* SceneDelegate.swift in Sources */,
 				A717C5C1256BF54F00744A90 /* ProgressBarView.swift in Sources */,
+				038B48542582FF7F006B3445 /* SmallCard.swift in Sources */,
+				038B48472582F8B6006B3445 /* SmallintroScreenView.swift in Sources */,
+				038B484C2582FCA1006B3445 /* SmallMainMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
